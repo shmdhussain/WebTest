@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starter page</title>
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script type="text/javascript">
+
+	</script>
+</head>
+
+<body>
+	<!--START: Entire Container-->
+	<div class="main-container">
+		<!--START:Page1 Container-->
+		<div id="page1">
+			
+			<!--START: PreHeader-->
+			<div class="Header">
+				<p>header</p>
+			</div>
+			<!--END: PreHeader-->
+			
+			<!--START: Content-->
+			<div  id="content" class="content">
+				
+				<input class="widthbutton" type="button" onClick="fnwidth();" value="get width gsgdsg"/>
+						
+						
+					
+			</div>
+			<!--END:Content-->
+			
+			<!--START: Footer-->
+			<div  class="Footer" >
+				<p>footer</p>
+			</div>
+
+			<!--END: Footer-->
+			
+		</div>
+		<!--START:Page1 Container-->
+	</div>
+	<!--END: Entire Container-->
+	<script>
+		function fnwidth(){
+			console.log("The Screen Width(these dimensions are measured in device pixels because they never change: they’re a feature of the monitor, and not of the browser.)");
+			console.log("the screen device width in dev ps is " + screen.width);
+			console.log("the screen device height in dev ps is " + screen.height);
+			console.log("the browser width in dev ps is " + window.innerWidth);
+			console.log("the browser width height in dev ps is " + window.innerHeight);
+			console.log("viewport wide " + document.documentElement.clientWidth);
+			console.log("viewport height " + document.documentElement.clientHeight);
+			console.log("devicePixelRatio:"+window.devicePixelRatio)
+		}
+		function fnlogLayoutDetailsInScreen(){
+			console.log("The Screen Width(these dimensions are measured in device pixels because they never change: they’re a feature of the monitor, and not of the browser.)");
+			console.log("the screen device width in dev ps is " + screen.width);
+			console.log("the screen device height in dev ps is " + screen.height);
+			console.log("the browser width in dev ps is " + window.innerWidth);
+			console.log("the browser width height in dev ps is " + window.innerHeight);
+			console.log("viewport wide " + document.documentElement.clientWidth);
+			console.log("viewport height " + document.documentElement.clientHeight);
+			console.log("devicePixelRatio:"+window.devicePixelRatio)
+		}
+
+		 
+
+		document.addEventListener("DOMContentLoaded", function(event) { 
+
+		  var parent=document.getElementById("content");
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="the screen device width in dev ps is " + screen.width;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="the screen device height in dev ps is " + screen.height;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="the browser width in dev ps is " + window.innerWidth;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="the browser width height in dev ps is " + window.innerHeight;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="viewport wide " + document.documentElement.clientWidth;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="viewport height " + document.documentElement.clientHeight;
+		  parent.appendChild(para);
+
+		  var para = document.createElement("P"); 
+		  para.innerHTML="devicePixelRatio:"+window.devicePixelRatio;
+		  parent.appendChild(para);
+
+
+		});
+	</script>
+</body>
+</html>
