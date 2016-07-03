@@ -28,7 +28,7 @@
         <meta property="og:description" content="testing summary" />
         <meta property="og:site_name" content="Sky News Arabia" />
         <meta property="og:type" content="article" />
-        <meta property="fb:app_id" content="1029897510354643" />
+        <meta property="fb:app_id" content="244590942255207" />
         <title> testing headline | أخبار سكاي نيوز عربية</title>
         <style type="text/css">
         a.linkedin-icon {
@@ -39,11 +39,33 @@
             display: block;
         }
         </style>
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '244590942255207',
+                xfbml: true,
+                version: 'v2.6'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
     </head>
 
     <body>
         Welcome to HTML BoilerPlate!!!
-        <a class="linkedin-icon"  href="https://www.facebook.com/sharer/sharer.php?u=http://shmdhussain.github.io/WebTest/Issues/sociallink/fbissue5.html&display=popup&app_id=244590942255207"></a>
+        <a class="linkedin-icon" href="https://www.facebook.com/sharer/sharer.php?u=http://shmdhussain.github.io/WebTest/Issues/sociallink/fbissue5.html&display=popup&app_id=244590942255207"></a>
+        <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+        </div>
     </body>
 
 </html>

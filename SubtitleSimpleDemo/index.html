@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Live subtitle page - iOS/HTML5/JW(Flash) combined</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+    <meta charset="utf-8" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/vtt.css">
+
+    <script type="text/javascript" 
+        src="jquery/dist/jquery.min.js"></script>
+
+    <!-- HLS player libraries in case needed -->
+    <script src="hls_js_dist_0.5.11/hls.min.js"></script>
+    <!-- uncomment for JWPlayer 6 flash -->
+    <script 
+	src="http://jwpsrv.com/library/DR5PKGnYEeKKaiIACp8kUw.js">
+    </script>
+
+<!-- uncomment for JWPlayer 7 flash -->
+    <!-- <script src='jwplayer-7.2.3\jwplayer.js'></script> -->
+<!--
+    <script 
+        src='http://content.jwplatform.com/libraries/OBe7pOeU.js'>
+    </script>
+-->
+
+    <!-- player libraries -->
+
+
+    <!-- CSF subtitling libraries -->
+    <script type="text/javascript" 
+	src='CSFPlayer/csfdecoder.js' 
+	charset="utf-8"></script>
+    <script type="text/javascript" 
+	src='CSFPlayer/csfsubtitler.js' 
+	charset="utf-8"></script>
+    <script type="text/javascript" 
+	src='CSFPlayer/id3parser.js' 
+	charset="utf-8"></script>
+    <script type="text/javascript" 
+	src='CSFPlayer/player.js' 
+	charset="utf-8"></script>
+    <script type="text/javascript" 
+	src='CSFPlayer/inserter_o.js' 
+	charset="utf-8"></script>
+
+<!-- script which runs window.onload to populate the html -->
+    <script type="text/javascript" 
+	src='playerscript.js' 
+	charset="utf-8"></script>
+  </head>
+
+  <body id='body' bgcolor=white style="border:0px;" >
+    <div style="background:#000; position:fixed; height:100px; width:100%; margin:auto; z-index:8000; opacity:0.8">
+       <p>test</p>
+    </div>
+    <div style="height:100px; width:100%; margin:auto; ">
+       <p>test2</p>
+    </div>
+    <div style="border:0px; width:100%">
+<!-- for flowplayer, must set width and height in pixels -->
+      <div id="wrapper" 
+        style="height: 100%; border:0px; background-color: grey; margin:auto; text-align:center; max-width:800px;">
+ 
+        <div id="videodiv" style="">
+        </div>
+      </div>
+
+
+    <button id="UseCSF" 
+      onclick="toggleUseCSF()">Turn On Images</button>
+    <button id="Fullscreen" 
+      onclick="FullScreen()">trigger Fullscreen</button>
+
+<p id="textoutput"></p>
+<p id="logtext">logtext</p>
+
+      <script type='text/javascript'>
+      </script>
+    </div>
+
+  </body>
+</html>

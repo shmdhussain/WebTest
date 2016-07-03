@@ -1,0 +1,19 @@
+
+
+::cue(c.red){ color: red; }
+::cue(c.blue){ color: blue; }
+::cue(c.green){ color: green; }
+::cue(c.yellow){ color: yellow; }
+::cue(c.magenta){ color: magenta; }
+::cue(c.cyan){ color: cyan; }
+::cue(c.white){ color: white; }
+::cue(c.black){ color: black; }
+
+::cue(c.bg-red){background-color: red;}
+::cue(c.bg-blue){background-color: blue;}
+::cue(c.bg-green){background-color: green;}
+::cue(c.bg-yellow){background-color: yellow;}
+::cue(c.bg-magenta){background-color: magenta;}
+::cue(c.bg-cyan){background-color: cyan;}
+::cue(c.bg-white){background-color: white;}
+::cue(c.bg-black){background-color: black;}
