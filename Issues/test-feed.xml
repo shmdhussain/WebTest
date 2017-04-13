@@ -89,15 +89,15 @@
     <item>
       <title>my item 3 title</title>
       <link>http://fshwebt.skynewsarabia.com/web/article/926696</link>
-      <description>my item 1 desc</description>
+      <description>my item 3 desc</description>
       <pubDate><![CDATA[Updated 22 hours ago]]></pubDate>
       <guid isPermaLink="false">926696</guid>
       <content:encoded><![CDATA[
-          <p>Testing1 Para</p>
+          <p>Testing3 Para</p>
+          <p>svsf Para</p>
+          <p>Testsfvfing Para</p>
           <p>Testing Para</p>
-          <p>Testing Para</p>
-          <p>Testing Para</p>
-          <p>Testing Para</p>
+          <p>Testssfbsing Para</p>
           <figure>
             <img src="http://i.imgur.com/RYh8lge.png" />
             <figcaption>he he caption
