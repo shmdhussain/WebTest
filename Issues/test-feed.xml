@@ -19,10 +19,10 @@
       <title>my item 1 title</title>
       <link>http://fshwebt.skynewsarabia.com/web/article/926698</link>
       <description>my item 1 desc</description>
-      <pubDate>Updated Wed, 12 Apr 2017 14:26:40 GMT</pubDate>
+      <pubDate><![CDATA[Updated 22 hours ago]]></pubDate>
       <guid isPermaLink="false">926698</guid>
       <content:encoded><![CDATA[
-          <p>Testing Para</p>
+          <p>Testing1 Para</p>
           <p>Testing Para</p>
           <p>Testing Para</p>
           <p>Testing Para</p>
@@ -36,7 +36,7 @@
 
         ]]></content:encoded>
 
-        
+
       <media:content url="http://i.imgur.com/sMcPjOq.png">
         <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
       </media:content>
