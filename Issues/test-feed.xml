@@ -114,6 +114,39 @@
     </item>
 
 
+    <item>
+      <title>my item 4 title</title>
+      <link>http://fshwebt.skynewsarabia.com/web/article/926695</link>
+      <description>my item 4 desc</description>
+      <pubDate>dac</pubDate>
+      <guid isPermaLink="false">926695</guid>
+      <content:encoded><![CDATA[
+          <p>Testing3 Para</p>
+          <p>svsf Para</p>
+          <video class="jw-video jw-reset" x-webkit-airplay="allow" webkit-playsinline="" playsinline="" jw-loaded="data" src="http://fshwebt.skynewsarabia.com/media/videos/2017/04/10/video_926576_1491823274126.mp4" jw-played="" style="object-fit: fill;"></video>
+          <p>Testsfvfing Para</p>
+          <p>Testing Para</p>
+          <p>Testssfbsing Para</p>
+          <figure>
+            <img src="http://i.imgur.com/RYh8lge.png" />
+            <figcaption>he he caption
+              <span class="copyright">my attr hehehe</span>
+            </figcaption>
+          </figure>
+
+        ]]></content:encoded>
+
+      <media:content url="http://i.imgur.com/sMcPjOq.png">
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+      </media:content>
+      <media:content url="http://fshwebt.skynewsarabia.com/media/videos/2017/03/11/test-engineering-online-vers3_2017-03-11_10%3A46%3A12.mp4" medium="video">
+        <media:title>Sample MP4 Video</media:title>
+        <media:description><![CDATA[This is a sample MP4 video]]></media:description>
+        <media:credit role="author" scheme="urn:ebu"><![CDATA[Warner Brothers]]></media:credit>
+      </media:content>
+    </item>
+
+
     
   </channel>
 </rss>
