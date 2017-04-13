@@ -41,6 +41,79 @@
         <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
       </media:content>
     </item>
+
+    <item>
+      <title>my item 1 title</title>
+      <link>http://fshwebt.skynewsarabia.com/web/article/926698</link>
+      <description>my item 1 desc</description>
+      <pubDate><![CDATA[Updated 22 hours ago]]></pubDate>
+      <guid isPermaLink="false">926698</guid>
+      <content:encoded><![CDATA[
+          <p>Testing1 Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <figure>
+            <img src="http://i.imgur.com/RYh8lge.png" />
+            <figcaption>he he caption
+              <span class="copyright">my attr hehehe</span>
+            </figcaption>
+          </figure>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <figure>
+            <img src="http://i.imgur.com/OSfUbqc.png" />
+            <figcaption>he he caption1
+            </figcaption>
+          </figure>
+
+
+        ]]></content:encoded>
+
+
+      <media:content url="http://i.imgur.com/sMcPjOq.png">
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+      </media:content>
+
+      <media:content url="http://i.imgur.com/N7KZs0Z.png">
+        <media:thumbnail url="http://i.imgur.com/N7KZs0Z.png" />
+        <media:title type="plain">The Judy's -- The Moo Song</media:title>
+        <media:description type="plain">This was some really bizarre band I listened to as a young lad.</media:description>
+        <media:keywords>kitty, cat, big dog, yarn, fluffy</media:keywords>
+      </media:content>
+
+
+    </item>
+
+    <item>
+      <title>my item 1 title</title>
+      <link>http://fshwebt.skynewsarabia.com/web/article/926698</link>
+      <description>my item 1 desc</description>
+      <pubDate><![CDATA[Updated 22 hours ago]]></pubDate>
+      <guid isPermaLink="false">926698</guid>
+      <content:encoded><![CDATA[
+          <p>Testing1 Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <p>Testing Para</p>
+          <figure>
+            <img src="http://i.imgur.com/RYh8lge.png" />
+            <figcaption>he he caption
+              <span class="copyright">my attr hehehe</span>
+            </figcaption>
+          </figure>
+
+        ]]></content:encoded>
+
+
+      <media:content url="http://i.imgur.com/sMcPjOq.png">
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+      </media:content>
+    </item>
+
+
     
   </channel>
 </rss>
