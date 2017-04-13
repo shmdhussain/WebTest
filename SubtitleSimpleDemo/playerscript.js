@@ -11,16 +11,12 @@ window.onload = function () {
 
       // control variables
 
-      var VideoSrc = 'http://stream.skynewsarabia.com/live/snahls.m3u8';
+      var VideoSrc = 'http://example.com/live/testhls.m3u8';
 
       // set to your Image subtitle .csf source
-      var CSFSrc = 'http://stream.skynewsarabia.com/subtitles/subtitles.csf';
+      var CSFSrc = 'http://example.com/subtitles/testhls.csf';
 
-      // if using JWPlayer6, put your ID here, e.g. playerNdrregKgdkldgd, else commment out
-      screenSystems.jwplayerid = 'playerVufatcvEHEhV';
-
-      // if using JWPlayer7, put key here, else commment out
-      screenSystems.jwplayerkey = "wdkjWWr4ySkY3+6zBHuLhVo8CgjEJHgQqulSFQ==";
+     
 
       // true or false to control subtitles overall.  They are already controlled by the 
       // 'captions' button in the player
