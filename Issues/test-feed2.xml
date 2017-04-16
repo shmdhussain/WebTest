@@ -44,11 +44,11 @@
           <media:text type="plain" lang="en" >my caption</media:text>
           <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926597/1200/676/1-926597.jpg" />
         </media:content>
-        <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926597/1200/676/1-926597.jpg">
+        <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926596/1200/676/1-926596.jpg">
           <media:description type="plain">My Description</media:description>
           <media:title type="plain">My Caption</media:title>
           <media:text type="plain" lang="en" >my caption</media:text>
-          <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926597/1200/676/1-926597.jpg" />
+          <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926596/1200/676/1-926596.jpg" />
         </media:content>
     </item>
     
