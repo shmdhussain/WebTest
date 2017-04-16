@@ -150,7 +150,41 @@
         <media:credit role="author" scheme="urn:ebu"><![CDATA[Warner Brothers]]></media:credit>
       </media:content>
     </item>
+  
+    <item>
+      <title>55 ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام title5</title>
+      <link>http://fshwebt.skynewsarabia.com/web/article/926694</link>
+      <description>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام desc5</description>
+      <pubDate>dac</pubDate>
+      <guid isPermaLink="false">926694</guid>
+      <content:encoded><![CDATA[
+          <p>Testing3 Para</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <!-- erdo -->
+          <video  poster="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926596/1000/563/1-926596.jpg" src="http://fshwebt.skynewsarabia.com/media/videos/2017/04/11/video_926671_1491920969998.mp4" ></video>
+          <p>Testsfvfing Para</p>
+          <p>Testing Para</p>
+          <p>Testssfbsing Para</p>
+          <figure>
+            <!-- grey image -->
+            <img src="http://i.imgur.com/RYh8lge.png" />
+            <figcaption>he he caption
+              <span class="copyright">my attr hehehe</span>
+            </figcaption>
+          </figure>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام</p>
+        ]]></content:encoded>
 
+      <media:content url="http://i.imgur.com/sMcPjOq.png">
+        <!-- red image -->
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+      </media:content>
+      <media:content url="http://fshwebt.skynewsarabia.com/media/videos/2017/03/11/test-engineering-online-vers3_2017-03-11_10%3A46%3A12.mp4" medium="video">
+        <media:title>Sample MP4 Video</media:title>
+        <media:description><![CDATA[This is a sample MP4 video]]></media:description>
+        <media:credit role="author" scheme="urn:ebu"><![CDATA[Warner Brothers]]></media:credit>
+      </media:content>
+    </item>
 
     
   </channel>
