@@ -206,7 +206,7 @@
           <video  poster="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926596/1000/563/1-926596.jpg" src="http://fshwebt.skynewsarabia.com/media/videos/2017/04/11/video_926671_1491920969998.mp4" ></video>
           <p class="redd">Testsfvfing Para</p>
           <p>Testing Para</p>
-          <p>Testssfbsing Para</p>
+          <p><a href="http://google.com">Testssfbsing Para</a></p>
           <figure>
             <!-- grey image -->
             <img src="http://i.imgur.com/RYh8lge.png" />
@@ -229,7 +229,50 @@
         <media:credit role="author" scheme="urn:ebu"><![CDATA[Warner Brothers]]></media:credit>
       </media:content>
     </item>
+    
+    <item>
+      <title>77 ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام title 7</title>
+      <link>http://fshwebt.skynewsarabia.com/web/article/926692</link>
+      <description>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام desc7</description>
+      <pubDate>Tue, 03 Jun 2015 09:39:21 GMT</pubDate>
+      <author>lawyer@boyer.net (Lawyer Boyer)</author>
+      <guid isPermaLink="false">926692</guid>
+      <content:encoded><![CDATA[
+          <p>666</p>
+          <p style="color:green">Testing7 Para yellow</p>
+          <style>
+            .redd{
+              color:red !important;
+            }
+          </style>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <!-- erdo vdo missile photo-->
+          <video  poster="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926596/1000/563/1-926596.jpg" src="http://fshwebt.skynewsarabia.com/media/videos/2017/04/11/video_926671_1491920969998.mp4" ></video>
+          <p class="redd">Testsfvfing Para red</p>
+          <p>Testing Para</p>
+          <p><a href="http://google.com">Testssfbsing Para</a></p>
+          <figure>
+            <!-- grey image -->
+            <img src="http://i.imgur.com/RYh8lge.png" />
+            <figcaption>he he caption
+              <span class="copyright">my attr hehehe</span>
+            </figcaption>
+          </figure>
 
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام</p>
+        ]]></content:encoded>
+
+      <media:content url="http://i.imgur.com/sMcPjOq.png">
+        <!-- red image -->
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+      </media:content>
+      <media:content url="http://fshwebt.skynewsarabia.com/media/videos/2017/03/11/test-engineering-online-vers3_2017-03-11_10%3A46%3A12.mp4" medium="video">
+        <media:title>Sample MP4 Video</media:title>
+        <media:thumbnail url="http://i.imgur.com/sMcPjOq.png" />
+        <media:description><![CDATA[This is a sample MP4 video]]></media:description>
+        <media:credit role="author" scheme="urn:ebu"><![CDATA[Warner Brothers]]></media:credit>
+      </media:content>
+    </item>
     
   </channel>
 </rss>
