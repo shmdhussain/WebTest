@@ -418,6 +418,71 @@
 
      
     </item>
+
+    <item>
+      <title>Video Figure في المئة من سكانها يعانون من السمنة وفقا لأرقام 2012</title>
+      <link>http://fshwebt.skynewsarabia.com/web/image_gallery/926687/</link>
+      <description>ويقول مؤسس فرقة دانزا فوليومينوزا خوان ميغيل ماس إن "الفتيات لا يأتين للاستوديو لإنقاص وزنهن، بل ليشعرن بأنهن راقصات باليه"، و"التعبير عن أنفسهن بالحركة</description>
+      <pubDate>Mon, 19 Apr 2017 05:39:21 GMT</pubDate>
+      <guid isPermaLink="false">926687</guid>
+      <content:encoded><![CDATA[
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+
+          <figure>
+            <!-- red image -->
+            <video  poster="http://i.imgur.com/hjLRqIR.png" src="http://fshwebt.skynewsarabia.com/media/videos/2017/03/11/LVO-191627SA-WEB-CHN-PANDA_2017-03-11_19%3A19%3A12.mp4" ></video>
+            <figcaption>video red caption
+              <span class="copyright">my red video attr caption</span>
+            </figcaption>
+          </figure>
+
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <figure>
+            <!-- green image -->
+            <img src="http://i.imgur.com/SU2yEli.png" />
+            <figcaption>green caption
+              <span class="copyright">my green attr caption</span>
+            </figcaption>
+          </figure>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <section class="type:slideshow">
+              <figure>
+                <!-- orange image -->
+                <img src="http://i.imgur.com/lhNcWOr.png" />
+                <figcaption>orange caption
+                  <span class="copyright">my orange attr caption</span>
+                </figcaption>
+              </figure>
+
+              <figure>
+                <!-- blue image -->
+                <img src="http://i.imgur.com/EZS7lTt.png" />
+                <figcaption>blue caption
+                  <span class="copyright">my blue attr caption</span>
+                </figcaption>
+              </figure>
+         </section>
+
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+
+        ]]></content:encoded>
+      <!-- yellow -->
+      <media:content url="http://i.imgur.com/gNEE7s3.png">
+        <media:thumbnail url="http://i.imgur.com/gNEE7s3.png" />
+        <media:description>This is yellow</media:description>
+      </media:content>
+      <!-- rose -->
+       <media:content url="http://i.imgur.com/s2wkjg2.png">
+        <media:thumbnail url="http://i.imgur.com/s2wkjg2.png" />
+        <media:description>This is rose</media:description>
+      </media:content>
+
+     
+    </item>
     
   </channel>
 </rss>
