@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-          <title>Channel title</title>
-          <link>http://fshwebt.skynewsarabia.com/web/home</link>
-          <description>channel Desc</description>
-          <language>en-us</language>
-          <copyright>Copyright 2013, Sky News Arabia. All Rights Reserved</copyright>
-          <lastBuildDate>Thu, 13 Apr 2017 08:28:22 GMT</lastBuildDate>
-          <category>MyHome</category>
-          <image>
-            <title>channel image title</title>
-            <url>http://fshwebt.skynewsarabia.com/web/asset/11.9/images/logo_tiny.png</url>
+        <title>أخبار اليوم | سكاي نيوز عربية</title>
+        <link>http://fshwebt.skynewsarabia.com/web/home</link>
+        <description>الرئيسية</description>
+        <language>en-us</language>
+        <copyright>Copyright 2013, Sky News Arabia. All Rights Reserved</copyright>
+        <lastBuildDate>Thu, 20 Apr 2017 12:14:54 GMT</lastBuildDate>
+        <category>Home</category>
+        <image>
+            <title>أخبار اليوم | سكاي نيوز عربية</title>
+            <url>http://fshwebt.skynewsarabia.com/web/asset/12.0/images/logo_tiny.png</url>
             <link>http://fshwebt.skynewsarabia.com/web/home</link>
-            <width>12</width>
-            <height>12</height>
-          </image>
+            <width>1</width>
+            <height>1</height>
+        </image>
         <item>
             <title>وتزن فتيات فوليومينوزا بين 19988 إلى 120 كيلوغراما، وكانت فكرة</title>
             <link>http://fshwebt.skynewsarabia.com/web/article/926768</link>
@@ -24,8 +24,8 @@
             <guid isPermaLink="false">926768</guid>
             <content:encoded>
                 <![CDATA[
-      	   <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
-	       <section dir="rtl" class="type:slideshow">
+           <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+         <section dir="rtl" class="type:slideshow">
               <figure  dir="rtl">
                 <!-- orange image -->
                 <img dir="rtl" src="http://i.imgur.com/lhNcWOr.png" />
@@ -50,11 +50,11 @@
                 </figcaption>
               </figure>
              <p>test para</p>
-         	 <p>test para</p>
-         	 <p>test para</p>
-          	 <p>test para</p>
+           <p>test para</p>
+           <p>test para</p>
+             <p>test para</p>
           </section>
-		  <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+      <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
     ]]>
             </content:encoded>
             <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg">
@@ -62,7 +62,7 @@
             </media:content>
         </item>
         <item>
-            <title>وتزن فتيات فوليومينوزا بين 19988 إلى 120 كيلوغراما، وكانت فكرة</title>
+            <title>وتزن فتيات فوليومينوزا بين 88888 إلى 120 كيلوغراما، وكانت فكرة</title>
             <link>http://fshwebt.skynewsarabia.com/web/article/926767</link>
             <description>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة الاستوديو لإيجاد مساحة للأجسام الغير لينة، وتدريبها لتصبح أكثر ليونة، مما يحسن أيضا العلاقة الاجتماعية للفتاة السمينة</description>
             <pubDate>Thu, 20 Apr 2017 11:35:39 GMT</pubDate>
@@ -70,8 +70,8 @@
             <guid isPermaLink="false">926767</guid>
             <content:encoded>
                 <![CDATA[
-      	   <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
-	       <section dir="ltr" class="type:slideshow">
+           <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+         <section dir="ltr" class="type:slideshow">
               <figure  dir="ltr">
                 <!-- orange image -->
                 <img dir="ltr" src="http://i.imgur.com/lhNcWOr.png" />
@@ -96,11 +96,11 @@
                 </figcaption>
               </figure>
              <p>test para</p>
-         	 <p>test para</p>
-         	 <p>test para</p>
-          	 <p>test para</p>
+           <p>test para</p>
+           <p>test para</p>
+             <p>test para</p>
           </section>
-		  <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+      <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
     ]]>
             </content:encoded>
             <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg">
