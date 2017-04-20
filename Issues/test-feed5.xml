@@ -1,86 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
-  <channel>
-    <title>أخبار اليوم | سكاي نيوز عربية</title>
-    <link>http://fshwebt.skynewsarabia.com/web/home</link>
-    <description>الرئيسية</description>
-    <language>ar-ae</language>
-    <copyright>Copyright 2013, Sky News Arabia. All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 20 Apr 2017 12:14:54 GMT</lastBuildDate>
-    <category>Home</category>
-    <image>
-      <title>أخبار اليوم | سكاي نيوز عربية</title>
-      <url>http://fshwebt.skynewsarabia.com/web/asset/12.0/images/logo_tiny.png</url>
-      <link>http://fshwebt.skynewsarabia.com/web/home</link>
-      <width>1</width>
-      <height>1</height>
-    </image>
-    <item>
-      <title>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة</title>
-      <link>http://fshwebt.skynewsarabia.com/web/article/926768</link>
-      <description>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة الاستوديو لإيجاد مساحة للأجسام الغير لينة، وتدريبها لتصبح أكثر ليونة، مما يحسن أيضا العلاقة الاجتماعية للفتاة السمينة</description>
-      <pubDate>Thu, 20 Apr 2017 11:35:39 GMT</pubDate>
-      <author>أبوظبي - سكاي نيوز عربية</author>
-      <guid isPermaLink="false">926768</guid>
-      <content:encoded><![CDATA[
-    <div class="row article-summary-container">
-    	<div class="small-12 columns">
-	        <h3 class="article-summary" itemprop="articleBody">حذرت وسائل إعلام كورية شمالية رسمية الأميركيين، الأربعاء، من &quot;ضربة وقائية مهولة&quot; وتحويل أميركا إلى رماد، في حين قال وزير الخارجية الأميركي ريكس تيلرسون إن بلاده تدرس خيارات للضغط على بيونغيانغ بشأن برنامجها النووي.</h3>
-	    </div>
-	</div>
-	<div class="row article-body first-article-body" itemprop="articleBody">
-	    <div>
-	        <p>واتخذ الرئيس الأميركي دونالد ترامب موقفا متشددا من زعيم كوريا الشمالية كيم جونغ أون الذي رفض تحذيرات الصين حليفته الرئيسية الوحيدة، ومضى في تطوير البرامج النووية والصاروخية في تحد لقرارات مجلس الأمن.</p>
-	        <section dir="ltr" class="type:slideshow">
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926761/1416/800/1-926761.jpg" />
-	                <figcaption dir="ltr">Image 1</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926762/1416/800/1-926762.jpg" />
-	                <figcaption dir="ltr">Image 2</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg" />
-	                <figcaption dir="ltr">Image 3</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926764/1416/800/1-926764.jpg" />
-	                <figcaption dir="ltr">Image 4</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926765/1416/800/1-926765.jpg" />
-	                <figcaption dir="ltr">Image 5</figcaption>
-	            </figure>
-	        </section>
-
-	        <section dir="ltr" class="type:slideshow">
-	              <figure  dir="ltr">
-	                <!-- orange image -->
-	                <img dir="ltr" src="http://i.imgur.com/lhNcWOr.png" />
-	                <figcaption dir="ltr" >orange caption
-	                  <span  dir="ltr" class="copyright">my orange attr caption</span>
-	                </figcaption>
-	              </figure>
-
-	              <figure dir="ltr">
-	                <!-- blue image -->
-	                <img dir="ltr" src="http://i.imgur.com/EZS7lTt.png" />
-	                <figcaption dir="ltr" >blue caption
-	                  <span  dir="ltr" class="copyright">my blue attr caption</span>
-	                </figcaption>
-	              </figure>
-
-	              <figure dir="ltr">
-	                <!-- yellow image -->
-	                <img dir="ltr" src="http://i.imgur.com/gNEE7s3.png" />
-	                <figcaption dir="ltr" >yellow caption
-	                  <span  dir="ltr" class="copyright">my yellow attr caption</span>
-	                </figcaption>
-	              </figure>
-	         </section>
-
-	         <section dir="rtl" class="type:slideshow">
+    <channel>
+        <title>أخبار اليوم | سكاي نيوز عربية</title>
+        <link>http://fshwebt.skynewsarabia.com/web/home</link>
+        <description>الرئيسية</description>
+        <language>ar-ae</language>
+        <copyright>Copyright 2013, Sky News Arabia. All Rights Reserved</copyright>
+        <lastBuildDate>Thu, 20 Apr 2017 12:14:54 GMT</lastBuildDate>
+        <category>Home</category>
+        <image>
+            <title>أخبار اليوم | سكاي نيوز عربية</title>
+            <url>http://fshwebt.skynewsarabia.com/web/asset/12.0/images/logo_tiny.png</url>
+            <link>http://fshwebt.skynewsarabia.com/web/home</link>
+            <width>1</width>
+            <height>1</height>
+        </image>
+        <item>
+            <title>وتزن فتيات فوليومينوزا بين 19988 إلى 120 كيلوغراما، وكانت فكرة</title>
+            <link>http://fshwebt.skynewsarabia.com/web/article/926768</link>
+            <description>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة الاستوديو لإيجاد مساحة للأجسام الغير لينة، وتدريبها لتصبح أكثر ليونة، مما يحسن أيضا العلاقة الاجتماعية للفتاة السمينة</description>
+            <pubDate>Thu, 20 Apr 2017 11:35:39 GMT</pubDate>
+            <author>أبوظبي - سكاي نيوز عربية</author>
+            <guid isPermaLink="false">926768</guid>
+            <content:encoded>
+                <![CDATA[
+      	   <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+	       <section dir="rtl" class="type:slideshow">
               <figure  dir="rtl">
                 <!-- orange image -->
                 <img dir="rtl" src="http://i.imgur.com/lhNcWOr.png" />
@@ -104,124 +49,17 @@
                   <span  dir="rtl" class="copyright">my yellow attr caption</span>
                 </figcaption>
               </figure>
-            <p>test para</p>
-          <p>test para</p>
-          <p>test para</p>
-          <p>test para</p>
-              
-         </section>
-	    </div>
-	</div>
-
-<p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
-    ]]></content:encoded>
- <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg">
-        <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg" />
-      </media:content>
-</item>
-    <item>
-      <title>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة</title>
-      <link>http://fshwebt.skynewsarabia.com/web/article/926769</link>
-      <description>وتزن فتيات فوليومينوزا بين 100 إلى 120 كيلوغراما، وكانت فكرة الاستوديو لإيجاد مساحة للأجسام الغير لينة، وتدريبها لتصبح أكثر ليونة، مما يحسن أيضا العلاقة الاجتماعية للفتاة السمينة</description>
-      <pubDate>Thu, 20 Apr 2017 10:35:39 GMT</pubDate>
-      <author>أبوظبي - سكاي نيوز عربية</author>
-      <guid isPermaLink="false">926769</guid>
-      <content:encoded><![CDATA[
-    <div class="row article-summary-container">
-    <div class="small-12 columns">
-	        <h3 class="article-summary" itemprop="articleBody">حذرت وسائل إعلام كورية شمالية رسمية الأميركيين، الأربعاء، من &quot;ضربة وقائية مهولة&quot; وتحويل أميركا إلى رماد، في حين قال وزير الخارجية الأميركي ريكس تيلرسون إن بلاده تدرس خيارات للضغط على بيونغيانغ بشأن برنامجها النووي.</h3>
-	    </div>
-	</div>
-	<div class="row article-body first-article-body" itemprop="articleBody">
-	    <div>
-	        <p>واتخذ الرئيس الأميركي دونالد ترامب موقفا متشددا من زعيم كوريا الشمالية كيم جونغ أون الذي رفض تحذيرات الصين حليفته الرئيسية الوحيدة، ومضى في تطوير البرامج النووية والصاروخية في تحد لقرارات مجلس الأمن.</p>
-	        <section dir="ltr" class="type:slideshow">
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926761/1416/800/1-926761.jpg" />
-	                <figcaption dir="ltr">Image 1</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926762/1416/800/1-926762.jpg" />
-	                <figcaption dir="ltr">Image 2</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg" />
-	                <figcaption dir="ltr">Image 3</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926764/1416/800/1-926764.jpg" />
-	                <figcaption dir="ltr">Image 4</figcaption>
-	            </figure>
-	            <figure dir="ltr">
-	                <img dir="ltr" src="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926765/1416/800/1-926765.jpg" />
-	                <figcaption dir="ltr">Image 5</figcaption>
-	            </figure>
-	        </section>
-
-	        <section dir="ltr" class="type:slideshow">
-	              <figure  dir="ltr">
-	                <!-- orange image -->
-	                <img dir="ltr" src="http://i.imgur.com/lhNcWOr.png" />
-	                <figcaption dir="ltr" >orange caption
-	                  <span  dir="ltr" class="copyright">my orange attr caption</span>
-	                </figcaption>
-	              </figure>
-
-	              <figure dir="ltr">
-	                <!-- blue image -->
-	                <img dir="ltr" src="http://i.imgur.com/EZS7lTt.png" />
-	                <figcaption dir="ltr" >blue caption
-	                  <span  dir="ltr" class="copyright">my blue attr caption</span>
-	                </figcaption>
-	              </figure>
-
-	              <figure dir="ltr">
-	                <!-- yellow image -->
-	                <img dir="ltr" src="http://i.imgur.com/gNEE7s3.png" />
-	                <figcaption dir="ltr" >yellow caption
-	                  <span  dir="ltr" class="copyright">my yellow attr caption</span>
-	                </figcaption>
-	              </figure>
-	         </section>
-
-	         <section dir="rtl" class="type:slideshow">
-              <figure  dir="rtl">
-                <!-- orange image -->
-                <img dir="rtl" src="http://i.imgur.com/lhNcWOr.png" />
-                <figcaption dir="rtl" >orange caption
-                  <span  dir="rtl" class="copyright">my orange attr caption</span>
-                </figcaption>
-              </figure>
-
-              <figure dir="rtl">
-                <!-- blue image -->
-                <img dir="rtl" src="http://i.imgur.com/EZS7lTt.png" />
-                <figcaption dir="rtl" >blue caption
-                  <span  dir="rtl" class="copyright">my blue attr caption</span>
-                </figcaption>
-              </figure>
-
-              <figure dir="rtl">
-                <!-- yellow image -->
-                <img dir="rtl" src="http://i.imgur.com/gNEE7s3.png" />
-                <figcaption dir="rtl" >yellow caption
-                  <span  dir="rtl" class="copyright">my yellow attr caption</span>
-                </figcaption>
-              </figure>
-            <p>test para</p>
-          <p>test para</p>
-          <p>test para</p>
-          <p>test para</p>
-              
-         </section>
-	    </div>
-	</div>
-
-<p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
-    ]]></content:encoded>
- <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg">
-        <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg" />
-      </media:content>
-</item>
-  </channel>
+             <p>test para</p>
+         	 <p>test para</p>
+         	 <p>test para</p>
+          	 <p>test para</p>
+          </section>
+		  <p>   وذكرت &quot;رودونغ سينمون&quot;، الصحيفة الرسمية لحزب العمال الحاكم في كوريا الشمالية: &quot;في حال توجيه ضربتنا الوقائية المهولة فلن تمحو فقط القوات الغازية الإمبريالية الأميركية تماما وعلى الفور في كوريا الجنوبية والمناطق المحيطة بها، بل في الأراضي الأميركية ذاتها، وتحولها إلى رماد&quot;.</p>
+    ]]>
+            </content:encoded>
+            <media:content url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg">
+                <media:thumbnail url="http://fshwebt.skynewsarabia.com/web/images/2017/04/20/926763/1416/800/1-926763.jpg" />
+            </media:content>
+        </item>
+    </channel>
 </rss>
