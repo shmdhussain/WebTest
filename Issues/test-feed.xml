@@ -1045,5 +1045,94 @@
       </media:content>
       
     </item>
+
+    <item>
+      <title>hello33 thumb Video Medium في المئة من سكانها يعانون من السمنة وفقا لأرقام 2012</title>
+      <link>http://fshwebt.skynewsarabia.com/web/image_gallery/926678/</link>
+      <description>ويقول مؤسس فرقة دانزا فوليومينوزا خوان ميغيل ماس إن "الفتيات لا يأتين للاستوديو لإنقاص وزنهن، بل ليشعرن بأنهن راقصات باليه"، و"التعبير عن أنفسهن بالحركة</description>
+      <pubDate>Mon, 19 Apr 2017 09:39:21 GMT</pubDate>
+      <guid isPermaLink="false">926678</guid>
+      <content:encoded><![CDATA[
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+
+          <figure>
+            <!-- red image -->
+            <img src="http://i.imgur.com/qi99pWh.png" />
+            <figcaption>red caption
+              <span class="copyright">my red attr caption</span>
+            </figcaption>
+          </figure>
+
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <video width="640" height="360"  poster="http://fshwebt.skynewsarabia.com/web/images/2017/04/10/926598/640/360/1-926598.jpg" src="http://media.skynewsarabia.com/media/videos/2017/04/16/WEB-SYR-ZAATARI-HAWAMDA_2017-04-16_18%3A55%3A08.mp4" ></video>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <figure>
+            <!-- green image -->
+            <img src="http://i.imgur.com/SU2yEli.png" />
+            <figcaption>green caption
+              <span class="copyright">my green attr caption</span>
+            </figcaption>
+          </figure>
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+          <section class="type:slideshow">
+              <figure>
+                <!-- orange image -->
+                <img src="http://i.imgur.com/lhNcWOr.png" />
+                <figcaption>orange caption
+                  <span class="copyright">my orange attr caption</span>
+                </figcaption>
+              </figure>
+
+              <figure>
+                <!-- blue image -->
+                <img src="http://i.imgur.com/EZS7lTt.png" />
+                <figcaption>blue caption
+                  <span class="copyright">my blue attr caption</span>
+                </figcaption>
+              </figure>
+         </section>
+
+          <p>ولد الريحاني، الذي اشتهر بشخصية "كشكش بيه"، في 21 يناير عام 555</p>
+
+        ]]></content:encoded>
+      <!-- yellow -->
+      <media:content url="http://i.imgur.com/gNEE7s3.png">
+        <media:thumbnail url="http://i.imgur.com/gNEE7s3.png" />
+        <media:description><![CDATA[This is yellow]]></media:description>
+      </media:content>
+      <!-- rose -->
+       <media:content url="http://i.imgur.com/s2wkjg2.png">
+        <media:thumbnail url="http://i.imgur.com/s2wkjg2.png" />
+        <media:description>This is rose</media:description>
+      </media:content>
+
+      
+      <!-- erdo -->
+      <media:content medium="video"  width="640" height="360" url="http://media.skynewsarabia.com/media/videos/2017/04/16/VT-124613SU-WEB-TUR-ERDOGAN-HAWAMDA_2017-04-16_12%3A51%3A12.mp4">
+        <media:thumbnail width="800"  height="450" url="http://www.skynewsarabia.com/web/images/2017/04/16/940936/800/450/1-940936.jpg" />
+        <media:description>this is erdo vdo</media:description>
+      </media:content>
+      <media:content medium="video"  width="640" height="360" url="http://media.skynewsarabia.com/media/videos/2017/04/16/WEB-WORK-NAJDAT_2017-04-16_18%3A36%3A08.mp4">
+        <media:thumbnail width="640"  height="360" url="http://www.skynewsarabia.com/web/images/2017/04/16/940936/640/360/1-940936.jpg" />
+        <media:description>this is erdo vdo</media:description>
+      </media:content>
+       
+
+      <content:encoded><![CDATA[
+        <p>I am back</p>
+        <p>I am back</p>
+        <p>I am back</p>
+        <p>I am back</p>
+
+      ]]></content:encoded>
+
+      <media:content medium="video"  width="640" height="360" url="http://media.skynewsarabia.com/media/videos/2017/04/16/VT-194809SU-WEB-YEM-SEAARROW-OPS-FADIA_2017-04-16_19%3A51%3A12.mp4">
+        <media:description>this is erdo vdo</media:description>
+      </media:content>
+      
+    </item>
   </channel>
 </rss>
