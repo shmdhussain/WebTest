@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+		<title>HTML BolierPlate</title>
+	    <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+	    <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+		<style>
+			.font32{font-size:32px}
+			p{
+				padding-bottom: 20px;
+			}
+			b{
+				font-weight: bold;
+			}
+		</style>
+
+	</head>
+
+	<body>
+	    
+	    Welcome to BoilerPlate!!!
+		
+		<div id="test">
+			
+		</div>
+
+		<script src="js/lib/jquery.min.js" ></script>
+	    <script src="js/myscript.js" ></script>
+	    <script>
+			jQuery(function($){
+				console.log("The Screen Width(these dimensions are measured in device pixels because they never change: they’re a feature of the monitor, and not of the browser.");
+
+				console.log("the browser width in dev ps is " + window.innerWidth);
+				console.log("the browser width height in dev ps is " + window.innerHeight);
+				console.log("the layout viewport wide " + document.documentElement.clientWidth);
+				console.log("the layout viewport height " + document.documentElement.clientHeight);
+				console.log("devicePixelRatio:"+window.devicePixelRatio)
+				console.log("the screen device width in dev ps is " + screen.width);
+				console.log("the screen device height in dev ps is " + screen.height);
+
+
+				$("#test").append("<p>UA: <br><br>" + navigator.userAgent +"</p>");
+				$("#test").append("<p>the browser width in dev ps is " + window.innerWidth +"</p>");
+				$("#test").append("<p>the browser width height in dev ps is " + window.innerHeight +"</p>");
+				$("#test").append("<p>the layout viewport wide " + document.documentElement.clientWidth +"</p>");
+				$("#test").append("<p>the layout viewport height " + document.documentElement.clientHeight +"</p>");
+				$("#test").append("<p>devicePixelRatio:"+window.devicePixelRatio +"</p>")
+				$("#test").append("<p>the screen device width in dev ps is " + screen.width +"</p>");
+				$("#test").append("<p>the screen device height in dev ps is " + screen.height +"</p>");
+				$("#test").append("<br><br><br><br><b> Connection Speed</b><br><br>");
+
+				if(typeof navigator.connection != 'undefined'){
+					for (key in navigator.connection){
+					    
+						console.log(key +" : " + navigator.connection[key])  ; 
+						$("#test").append("<p> " + key + " : <b>" + navigator.connection[key] + "</b></p>"); 
+					}
+				}else{
+					console.log("Navigator.connection is not defined")  ;
+					$("#test").append("<p> Navigator.connection is not defined</p>"); 
+				}
+
+
+			});
+			
+		</script>
+	</body>
+</html>
