@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Test TT</title>
+	    <link rel="stylesheet" type="text/css" href="/lib/reset.css"></link>
+	    <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+		<script src="/lib/jquery.min.js" ></script>
+	    <script src="js/myscript.js" ></script>
+		<script>
+			jQuery(function($){
+				var bgColorArray = ["#30bced", "#a30000" ,"#ff7700" ,"#d664be" ,"#00afb5", "#71b34f", "#597882", "#e07254", "#d0cfca", "#b8b3be",
+				"#30bced", "#a30000" ,"#ff7700" ,"#d664be" ,"#00afb5", "#71b34f", "#597882", "#e07254", "#d0cfca", "#b8b3be"];
+				$(".scenario").each(function(index, el) {
+					$(this).css({"background-color": bgColorArray[index]});
+					$(this).html($(this).attr('href'));
+					$(this).attr('target', '_blank');
+				});
+
+
+			});
+			
+		</script>
+		<style>
+			.font32{font-size:32px}
+			.scenario{
+				display: block;
+				margin-bottom: 80px;
+				width: 100%;
+				height:50px;
+				padding-top:20px;
+				color:white;
+				font-weight:bold;
+				text-align: center;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<a href="index-8.0.0.html" class="scenario bg1">&nbsp;</a>
+		<a href="index-jw-7.12.8.html" class="scenario bg1">&nbsp;</a>
+		<a href="index-jw-7.8.7.html" class="scenario bg1">&nbsp;</a>
+	</body>
+</html>
