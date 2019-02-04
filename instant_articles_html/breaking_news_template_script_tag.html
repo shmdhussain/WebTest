@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<style type="text/css">	
+			iframe{
+				width: 100%;
+				max-width: 500px;
+			}
+		
+
+			
+		</style>
+		<script type="text/javascript">
+			
+			function iframeOnload(el) {
+				console.log(el);
+				// debugger;
+			}
+		</script>
+		    		
+	</head>
+
+	<body>
+	    
+	    <iframe onload="iframeOnload(this)" srcdoc='
+	    	<div class="sna_ia_widget_cont"></div>
+			<script src="https://shmdhussain.github.io/WebTest/instant_articles_html/breaking_news_template.js"></script>
+	    '>
+		
+
+	    </iframe>
+
+		
+	</body>
+</html>
