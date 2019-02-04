@@ -258,7 +258,9 @@ var template = function() {
                 if(item.link){
                     breakingNewsItemContent = '<a href="' + item.link + '" title="' + item.message + 'cds "'+
                                                 'class="breaking_news_list_item_message breaking_news_list_item_link">'+
-                                                    '<div class="breaking_message" data-ng-bind="::breakingItem.message"></div>'+
+	                                                    '<div class="breaking_message" data-ng-bind="::breakingItem.message">'+
+	                                                    	item.message
+	                                                    '</div>'+
                                                         '<div class="breaking_news_list_item_message_link_wrap">'+
                                                             '<span class="breaking_news_list_item_message_link">'+
                                                                 'المزيد'+
