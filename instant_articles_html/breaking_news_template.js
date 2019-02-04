@@ -14,44 +14,91 @@ var data;
 data = {
     "envelope": {
         "copyright": "كافة العلامات التجارية الخاصة بـ SKY وكل ما تتضمنه من حقوق الملكية الفكرية هي ملك لمجموعة Sky International AG ولا تستخدم إلا بتصريح مسبق",
-        "serverTime": "2019-02-04T12:29:35Z"
+        "serverTime": "2019-02-04T15:25:35Z"
     },
     "breakingNewsTitle": "الأخبار العاجلة",
-    "breakingNews": [{
-            "@id": 1,
-            "id": 71194,
-            "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-            "time": "2019-02-04T11:51+0000",
-            "autoPushed": false,
-            "deleted": false,
-            "breaking": true,
-            "linkType": "INTERNAL",
-            "contentId": 1222320,
-            "contentType": "ARTICLE",
-            "infographic": false,
-            "messyConfiguration": false,
-            "digestNotification": false,
-            "object": 1,
-            "appName": "SNA_APP,WEB_APP",
-            "isInfographicContent": false
-        },
-        {
-            "@id": 2,
-            "id": 71193,
-            "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-            "time": "2019-02-04T11:50+0000",
-            "autoPushed": false,
-            "deleted": false,
-            "breaking": true,
-            "linkType": "DEFAULT",
-            "infographic": false,
-            "messyConfiguration": false,
-            "digestNotification": false,
-            "object": 2,
-            "appName": "SNA_APP,WEB_APP",
-            "isInfographicContent": false
-        }
-    ]
+    "breakingNews": [
+  {
+    "@id": 1,
+    "id": 72126,
+    "message": "شيخ الأزهر: على المسلمين في الشرق الأوسط حماية إخوانهم المسيحيين",
+    "time": "2019-02-04T15:09+0000",
+    "autoPushed": false,
+    "deleted": false,
+    "breaking": true,
+    "linkType": "DEFAULT",
+    "infographic": false,
+    "digestNotification": false,
+    "messyConfiguration": false,
+    "object": 1,
+    "appName": "SNA_APP,WEB_APP",
+    "isInfographicContent": false
+  },
+  {
+    "@id": 2,
+    "id": 72125,
+    "message": "شيخ الأزهر: المسيحية احتضنت الإسلام عندما كان دينا وليدا",
+    "time": "2019-02-04T15:08+0000",
+    "autoPushed": false,
+    "deleted": false,
+    "breaking": true,
+    "linkType": "DEFAULT",
+    "infographic": false,
+    "digestNotification": false,
+    "messyConfiguration": false,
+    "object": 2,
+    "appName": "SNA_APP,WEB_APP",
+    "isInfographicContent": false
+  },
+  {
+    "@id": 3,
+    "id": 72124,
+    "message": "الشيخ محمد بن راشد يعلن منح جائزة الأخوّة الإنسانية للبابا فرنسيس وشيخ الأزهر",
+    "time": "2019-02-04T14:55+0000",
+    "autoPushed": false,
+    "deleted": false,
+    "breaking": true,
+    "linkType": "DEFAULT",
+    "infographic": false,
+    "digestNotification": false,
+    "messyConfiguration": false,
+    "object": 3,
+    "appName": "SNA_APP,WEB_APP",
+    "isInfographicContent": false
+  },
+  {
+    "@id": 4,
+    "id": 72123,
+    "message": "شيخ الأزهر: وثيقة الأخوة الإنسانية تطالب القادة بوقف نزيف الدماء وإنهاء الصراعات",
+    "time": "2019-02-04T14:51+0000",
+    "autoPushed": false,
+    "deleted": false,
+    "breaking": true,
+    "linkType": "DEFAULT",
+    "infographic": false,
+    "digestNotification": false,
+    "messyConfiguration": false,
+    "object": 4,
+    "appName": "SNA_APP,WEB_APP",
+    "isInfographicContent": false
+  },
+  {
+    "@id": 5,
+    "id": 72122,
+    "message": "شيخ الأزهر: أتوجه بالشكر لدولة الإمارات قيادة وشعبا لاستضافة هذا الحدث التاريخي",
+    "time": "2019-02-04T14:50+0000",
+    "autoPushed": false,
+    "deleted": false,
+    "breaking": true,
+    "linkType": "DEFAULT",
+    "infographic": false,
+    "digestNotification": false,
+    "messyConfiguration": false,
+    "object": 5,
+    "appName": "SNA_APP,WEB_APP",
+    "isInfographicContent": false
+  }
+]
 }
 window.currentTime = data.envelope.serverTime;
 //process time
@@ -168,41 +215,41 @@ var template = function() {
 
     // If there are
     return '<h2 class="sna_title_1 breaking">\
-				<span class="sna_title_1_text" >' + data.breakingNewsTitle + '</span>\
-			</h2><div class="breaking_news_cont">' 
+                <span class="sna_title_1_text" >' + data.breakingNewsTitle + '</span>\
+            </h2><div class="breaking_news_cont">' 
 
-			+ data.breakingNews.map(function(item) {
+            + data.breakingNews.map(function(item) {
 
-				item = preProcessDataItem(item);
+                item = preProcessDataItem(item);
 
-				var dateStrNotNow = '<div class="breaking_news_list_item_date">\
-										<div class="breaking_news_list_item_date_content">\
-										    <i class="content_list_item_date_icon">l</i>\
+                var dateStrNotNow = '<div class="breaking_news_list_item_date">\
+                                        <div class="breaking_news_list_item_date_content">\
+                                            <i class="content_list_item_date_icon">l</i>\
                                             <span>'
-											    + item.formattedTime +
-											'</span>\
-										</div>\
-									</div>';
+                                                + item.formattedTime +
+                                            '</span>\
+                                        </div>\
+                                    </div>';
 
-				var dateStrNow = '<div class="breaking_news_list_item_date"\
-									<div class="breaking_news_list_item_date_content now">\
-										<span>الآن</span>\
-									</div>\
-								</div>';
-				var dateStr;
-				
-				if(item.dateNow){
-					dateStr = dateStrNow;
-				}else{
-					dateStr = dateStrNotNow;
-				}				
+                var dateStrNow = '<div class="breaking_news_list_item_date"\
+                                    <div class="breaking_news_list_item_date_content now">\
+                                        <span>الآن</span>\
+                                    </div>\
+                                </div>';
+                var dateStr;
+                
+                if(item.dateNow){
+                    dateStr = dateStrNow;
+                }else{
+                    dateStr = dateStrNotNow;
+                }               
 
 
-				var breakingNewsItemContent;
+                var breakingNewsItemContent;
 
                 
                 if(item.link){
-					breakingNewsItemContent = '<a href="' + item.link + '" title="' + item.message + 'cds "'+
+                    breakingNewsItemContent = '<a href="' + item.link + '" title="' + item.message + 'cds "'+
                                                 'class="breaking_news_list_item_message breaking_news_list_item_link">'+
                                                     '<div class="breaking_message" data-ng-bind="::breakingItem.message"></div>'+
                                                         '<div class="breaking_news_list_item_message_link_wrap">'+
@@ -212,42 +259,42 @@ var template = function() {
                                                         '</div>'+
                                                     '</div>'+
                                                 '</a>';
-				}else{
-					breakingNewsItemContent = '<div class="breaking_news_list_item_message">'+ item.message +'</div>';
-				}
+                }else{
+                    breakingNewsItemContent = '<div class="breaking_news_list_item_message">'+ item.message +'</div>';
+                }
 
 
 
 
 
-        		return '<div class="breaking_news_list_item">'
-						 + dateStr + ' '
-						 + breakingNewsItemContent +
-						'</div>';
+                return '<div class="breaking_news_list_item">'
+                         + dateStr + ' '
+                         + breakingNewsItemContent +
+                        '</div>';
 
 
 
-    		}).join('') + 
+            }).join('') + 
 
 
-    		'</div><div class="more-content">\
-				<a href="/breaking-news-الأخبار-العاجلة" class="more-link"\
-						title="المزيد " style="margin: 0;">\
-					المزيد\
-				</a>\
-			</div>';
+            '</div><div class="more-content">\
+                <a href="/breaking-news-الأخبار-العاجلة" class="more-link"\
+                        title="المزيد " style="margin: 0;">\
+                    المزيد\
+                </a>\
+            </div>';
 
 };
 
 //Function to data item pre process
 preProcessDataItem = function(item) {
-	var currentTime = new Date().getTime();
+    var currentTime = new Date().getTime();
 
     var breakingItem = item;
     if (breakingItem.linkType == "INTERNAL" && breakingItem.contentType && breakingItem.contentId) {
         breakingItem.link = "/" + breakingItem.contentType.toLowerCase().replace("-", "_") + "/" + breakingItem.contentId;
         if (breakingItem.isInfographicContent) {
-        		breakingItem.link = breakingItem.link.replace("/image_gallery/", "/infographic/");
+                breakingItem.link = breakingItem.link.replace("/image_gallery/", "/infographic/");
         }
     } else if (breakingItem.linkType == "EXTERNAL") {
 
