@@ -1,5 +1,5 @@
 // <div id="list" aria-live="polite"></div>
-var widgetContSelectorClass = "sna_ia_widget_cont"
+var widgetContSelectorClass = "article-widget-holder"
 // var widgetCont = document.createElement("div");
 // widgetCont.classList.add(widgetContSelectorClass);
 // document.body.appendChild(widgetCont);
