@@ -4,113 +4,139 @@ var widgetContSelectorClass = "sna_ia_widget_cont"
 // widgetCont.classList.add(widgetContSelectorClass);
 // document.body.appendChild(widgetCont);
 
-var domain = "http://www.leg9.webdev.skynewsarabia.com";
-var contentApi = domain + "/rest/v2/sidebar/others.json";
+// var domain = "http://www.leg9.webdev.skynewsarabia.com";
+var domain = "https://www.skynewsarabia.com";
+var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
 
+var getJSON = function(url, successHandler, errorHandler) {
+    var xhr = new XMLHttpRequest()
+    xhr.open('get', url, true);
+    xhr.responseType = 'json';
+    xhr.onreadystatechange = function() {
+        var status;
+        var data;
+        // https://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
+        if (xhr.readyState == 4) { // `DONE`
+            status = xhr.status;
+            if (status == 200) {
+                successHandler && successHandler(xhr.response);
+            } else {
+                errorHandler && errorHandler(status);
+            }
+        }
+    };
+    xhr.send();
+};
 
-// Data State (get from BE API)
 var data;
 
-data = {
-    "envelope": {
-        "copyright": "كافة العلامات التجارية الخاصة بـ SKY وكل ما تتضمنه من حقوق الملكية الفكرية هي ملك لمجموعة Sky International AG ولا تستخدم إلا بتصريح مسبق",
-        "serverTime": "2019-02-04T13:25:35Z"
-    },
-    "breakingNewsTitle": "الأخبار العاجلة",
-    "breakingNews": [
-  {
-    "@id": 1,
-    "id": 71223,
-    "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-    "time": "2019-02-04T13:23+0000",
-    "autoPushed": false,
-    "deleted": false,
-    "breaking": true,
-    "linkType": "EXTERNAL",
-    "infographic": false,
-    "messyConfiguration": false,
-    "digestNotification": false,
-    "object": 1,
-    "appName": "SNA_APP,WEB_APP",
-    "link": "https://www.skynewsarabia.com/topic/1222568",
-    "isInfographicContent": false
-  },
-  {
-    "@id": 2,
-    "id": 71222,
-    "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-    "time": "2019-02-04T13:21+0000",
-    "autoPushed": false,
-    "deleted": false,
-    "breaking": true,
-    "linkType": "EXTERNAL",
-    "infographic": false,
-    "messyConfiguration": false,
-    "digestNotification": false,
-    "object": 2,
-    "appName": "SNA_APP,WEB_APP",
-    "link": "https://www.skynewsarabia.com/program/newsroom",
-    "isInfographicContent": false
-  },
-  {
-    "@id": 3,
-    "id": 71221,
-    "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-    "time": "2019-02-04T12:53+0000",
-    "autoPushed": false,
-    "deleted": false,
-    "breaking": true,
-    "linkType": "INTERNAL",
-    "contentId": 1222320,
-    "contentType": "ARTICLE",
-    "infographic": false,
-    "messyConfiguration": false,
-    "digestNotification": false,
-    "object": 3,
-    "appName": "SNA_APP,WEB_APP",
-    "isInfographicContent": false
-  },
-  {
-    "@id": 4,
-    "id": 71220,
-    "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-    "time": "2019-02-04T12:44+0000",
-    "autoPushed": false,
-    "deleted": false,
-    "breaking": true,
-    "linkType": "INTERNAL",
-    "contentId": 1222320,
-    "contentType": "ARTICLE",
-    "infographic": false,
-    "messyConfiguration": false,
-    "digestNotification": false,
-    "object": 4,
-    "appName": "SNA_APP,WEB_APP",
-    "isInfographicContent": false
-  },
-  {
-    "@id": 5,
-    "id": 71219,
-    "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
-    "time": "2019-02-04T12:31+0000",
-    "autoPushed": false,
-    "deleted": false,
-    "breaking": true,
-    "linkType": "EXTERNAL",
-    "infographic": false,
-    "messyConfiguration": false,
-    "digestNotification": false,
-    "object": 5,
-    "appName": "SNA_APP,WEB_APP",
-    "link": "https://www.skynewsarabia.com/blog/1222593",
-    "isInfographicContent": false
-  }
-]
-}
-window.currentTime = data.envelope.serverTime;
-//process time
+var escapeDoubleAndSingleQuotes = function (str) {
+    return str.replace(/\\([\s\S])|(["])/g,"$1&quot;"); // thanks @slevithan!
+};
 
-function getCurrentTime() {
+// Data State (get from BE API)
+
+// data = {
+//     "envelope": {
+//         "copyright": "كافة العلامات التجارية الخاصة بـ SKY وكل ما تتضمنه من حقوق الملكية الفكرية هي ملك لمجموعة Sky International AG ولا تستخدم إلا بتصريح مسبق",
+//         "serverTime": "2019-02-04T13:25:35Z"
+//     },
+//     "breakingNewsTitle": "الأخبار العاجلة",
+//     "breakingNews": [
+//   {
+//     "@id": 1,
+//     "id": 71223,
+//     "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
+//     "time": "2019-02-04T13:23+0000",
+//     "autoPushed": false,
+//     "deleted": false,
+//     "breaking": true,
+//     "linkType": "EXTERNAL",
+//     "infographic": false,
+//     "messyConfiguration": false,
+//     "digestNotification": false,
+//     "object": 1,
+//     "appName": "SNA_APP,WEB_APP",
+//     "link": "https://www.skynewsarabia.com/topic/1222568",
+//     "isInfographicContent": false
+//   },
+//   {
+//     "@id": 2,
+//     "id": 71222,
+//     "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
+//     "time": "2019-02-04T13:21+0000",
+//     "autoPushed": false,
+//     "deleted": false,
+//     "breaking": true,
+//     "linkType": "EXTERNAL",
+//     "infographic": false,
+//     "messyConfiguration": false,
+//     "digestNotification": false,
+//     "object": 2,
+//     "appName": "SNA_APP,WEB_APP",
+//     "link": "https://www.skynewsarabia.com/program/newsroom",
+//     "isInfographicContent": false
+//   },
+//   {
+//     "@id": 3,
+//     "id": 71221,
+//     "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
+//     "time": "2019-02-04T12:53+0000",
+//     "autoPushed": false,
+//     "deleted": false,
+//     "breaking": true,
+//     "linkType": "INTERNAL",
+//     "contentId": 1222320,
+//     "contentType": "ARTICLE",
+//     "infographic": false,
+//     "messyConfiguration": false,
+//     "digestNotification": false,
+//     "object": 3,
+//     "appName": "SNA_APP,WEB_APP",
+//     "isInfographicContent": false
+//   },
+//   {
+//     "@id": 4,
+//     "id": 71220,
+//     "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
+//     "time": "2019-02-04T12:44+0000",
+//     "autoPushed": false,
+//     "deleted": false,
+//     "breaking": true,
+//     "linkType": "INTERNAL",
+//     "contentId": 1222320,
+//     "contentType": "ARTICLE",
+//     "infographic": false,
+//     "messyConfiguration": false,
+//     "digestNotification": false,
+//     "object": 4,
+//     "appName": "SNA_APP,WEB_APP",
+//     "isInfographicContent": false
+//   },
+//   {
+//     "@id": 5,
+//     "id": 71219,
+//     "message": "للحصول على آخر الأخبار العاجلة تابعوا حساب سكاي نيوز عربية العاجل على تويتر @skynewsarabia_b",
+//     "time": "2019-02-04T12:31+0000",
+//     "autoPushed": false,
+//     "deleted": false,
+//     "breaking": true,
+//     "linkType": "EXTERNAL",
+//     "infographic": false,
+//     "messyConfiguration": false,
+//     "digestNotification": false,
+//     "object": 5,
+//     "appName": "SNA_APP,WEB_APP",
+//     "link": "https://www.skynewsarabia.com/blog/1222593",
+//     "isInfographicContent": false
+//   }
+// ]
+// }
+
+
+
+//process time
+var getCurrentTime = function() {
     if (window.currentTime) {
         return window.currentTime;
     } else {
@@ -119,7 +145,7 @@ function getCurrentTime() {
     return window.currentTime;
 }
 
-function processTime(time) {
+var processTime = function (time) {
 
     var current = new Date(getCurrentTime()).getTime();
     var previous = new Date(time).getTime();
@@ -256,10 +282,10 @@ var template = function() {
 
                 
                 if(item.link){
-                    breakingNewsItemContent = '<a href="' + item.link + '" title="' + item.message + 'cds "'+
+                    breakingNewsItemContent = '<a href="' + escapeDoubleAndSingleQuotes(item.link) + '" title="' + escapeDoubleAndSingleQuotes(item.message) + 'cds "'+
                                                 'class="breaking_news_list_item_message breaking_news_list_item_link">'+
-                                                    '<div class="breaking_message" data-ng-bind="::breakingItem.message">'+
-                                                    	item.message
+                                                    '<div class="breaking_message">'+
+                                                        escapeDoubleAndSingleQuotes(item.message) +
                                                     '</div>'+
                                                     '<div class="breaking_news_list_item_message_link_wrap">'+
                                                         '<span class="breaking_news_list_item_message_link">'+
@@ -268,13 +294,16 @@ var template = function() {
                                                     '</div>'+
                                                 '</a>';
                 }else{
-                    breakingNewsItemContent = '<div class="breaking_news_list_item_message">'+ item.message +'</div>';
+                    breakingNewsItemContent = '<div class="breaking_news_list_item_message">'+ escapeDoubleAndSingleQuotes(item.message) +'</div>';
                 }
 
 
 
 
-
+                console.log(`<div class="breaking_news_list_item">
+                          ${dateStr}
+                          ${breakingNewsItemContent} 
+                        </div>`);    
                 return '<div class="breaking_news_list_item">'
                          + dateStr + ' '
                          + breakingNewsItemContent +
@@ -325,6 +354,12 @@ var render = function() {
     list.innerHTML = template();
 };
 
-// Render the UI after getting data from BE API
-render();
 
+getJSON(contentApiUrl, function(responseData) {
+    data = responseData;
+    window.currentTime = responseData.envelope.serverTime;
+    // Render the UI after getting data from BE API
+    render();
+}, function(status) {
+    console.log(status);
+});
