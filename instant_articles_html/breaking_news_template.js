@@ -300,10 +300,10 @@ var template = function() {
 
 
 
-                console.log(`<div class="breaking_news_list_item">
-                          ${dateStr}
-                          ${breakingNewsItemContent} 
-                        </div>`);    
+                // console.log(`<div class="breaking_news_list_item">
+                //           ${dateStr}
+                //           ${breakingNewsItemContent} 
+                //         </div>`);    
                 return '<div class="breaking_news_list_item">'
                          + dateStr + ' '
                          + breakingNewsItemContent +
@@ -359,7 +359,7 @@ getJSON(contentApiUrl, function(responseData) {
     // data = responseData;
     window.currentTime = responseData.envelope.serverTime;
     // Render the UI after getting data from BE API
+    console.log(responseData);
     render();
 }, function(status) {
-    console.log(status);
 });
