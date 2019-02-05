@@ -256,8 +256,8 @@ var template = function() {
                 item = preProcessDataItem(item);
 
                 var dateStrNotNow = '<div class="breaking_news_list_item_date">\
-                                        <div class="breaking_news_list_item_date_content">\
-                                            <i class="content_list_item_date_icon">l</i>\
+                                        <div dir="rtl" lang="ar" class="breaking_news_list_item_date_content">\
+                                            <i dir="rtl" lang="ar" class="content_list_item_date_icon">l</i>\
                                             <span>'
                                                 + item.formattedTime +
                                             '</span>\
