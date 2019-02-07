@@ -68,7 +68,7 @@ var template = function() {
 
                 var mediaIndicatorText;
                 var mediaIndicatorImgIcon;
-                var contentItemUrl = item.type.toLowerCase() + "/" + item.id;
+                var contentItemUrl = "/" + item.type.toLowerCase() + "/" + item.id;
                 if(item.type == 'IMAGE_GALLERY'){
                     if(item.isInfographicContent){
                         contentItemUrl = "/infographic/" + item.id;
