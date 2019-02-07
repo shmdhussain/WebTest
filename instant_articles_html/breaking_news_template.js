@@ -6,8 +6,8 @@ var widgetContSelectorClass = "article-widget-holder"
 
 // var domain = "http://www.leg9.webdev.skynewsarabia.com";
 var domain = "https://www.skynewsarabia.com";
-// var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
-var contentApiUrl = "/rest/v2/sidebar/article.json";
+var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
+// var contentApiUrl = "/rest/v2/sidebar/article.json";
 
 var getJSON = function(url, successHandler, errorHandler) {
     var xhr = new XMLHttpRequest()
