@@ -1,15 +1,8 @@
-// <div id="list" aria-live="polite"></div>
 var widgetContSelectorClass = "article-widget-holder"
-// var widgetCont = document.createElement("div");
-// widgetCont.classList.add(widgetContSelectorClass);
-// document.body.appendChild(widgetCont);
 
 // var domain = "http://www.leg9.webdev.skynewsarabia.com";
 var domain = "https://www.skynewsarabia.com";
-// var domain = "http://10.64.161.22:8088";
-// var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
 var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
-// var contentApiUrl = domain + "/instant_article_test/test_data/sidebar_data.json";
 
 var getJSON = function(url, successHandler, errorHandler) {
     var xhr = new XMLHttpRequest()
@@ -36,13 +29,6 @@ var data;
 var escapeDoubleAndSingleQuotes = function (str) {
     return str.replace(/\\([\s\S])|(["])/g,"$1&quot;"); // thanks @slevithan!
 };
-
-// Data State (get from BE API)
-
-
-
-
-
 
 
 
@@ -160,6 +146,7 @@ var render = function() {
     list.innerHTML = template();
 };
 
+//turn into human readable duration
 var videoDuration = function(runtime) {
     if(runtime != undefined)
      {
@@ -174,6 +161,7 @@ var videoDuration = function(runtime) {
      }
 }
 
+//get data from BE
 getJSON(contentApiUrl, function(responseData) {
     data = responseData;
     window.currentTime = responseData.envelope.serverTime;
