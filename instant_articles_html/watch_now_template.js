@@ -56,7 +56,7 @@ var template = function() {
 
     // If there are
     return '<h2 class="sna_title_1 image">\
-                <a href="/most-popular-تفضيلات-القراء"  title="'+ data.sidebarWidgetTitle + '">\
+                <a href="javascript:window.open(\"/most-popular-تفضيلات-القراء\");void(0);"  title="'+ data.sidebarWidgetTitle + '">\
                     <img src="https://www.skynewsarabia.com/static/web-rev/assets/img/svg-icons/watch_now.svg" alt="" role="presentation" />\
                     <span class="sna_title_1_text" >'+ data.sidebarWidgetTitle + '</span>\
                 </a>\
@@ -110,7 +110,7 @@ var template = function() {
                 
                 
                 watchNowItemContent = '<li class="watch_now_content_item">\
-                                        <a  href="'+ contentItemUrl +'"title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
+                                        <a  href="javascript:window.open(\''+ contentItemUrl +'\');void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
                                             <div class="editor-choice-img">\
                                                 <img class="img_16_9" src="https://www.skynewsarabia.com/images/'+ getActualImageUrl(item.mediaAsset.imageUrl) +'" alt="'+ escapeDoubleAndSingleQuotes(item.mediaAsset.caption) +'" />'
                                                 + mediaIndicatorText + 
