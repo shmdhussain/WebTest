@@ -160,6 +160,19 @@ var render = function() {
     list.innerHTML = template();
 };
 
+var videoDuration = function(runtime) {
+    if(runtime != undefined)
+     {
+         if(runtime.slice(0,2) == "00")
+         {
+             return runtime.slice(3,8);
+         }
+         else if(runtime.slice(0,2) != "00")
+         {
+             return runtime.slice(0,8);
+         }
+     }
+}
 
 getJSON(contentApiUrl, function(responseData) {
     data = responseData;
