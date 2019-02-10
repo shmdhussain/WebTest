@@ -110,7 +110,7 @@ var template = function() {
                 
                 
                 watchNowItemContent = '<li class="watch_now_content_item">\
-                                        <a  onclick="window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" href="javascript:void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
+                                        <div title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
                                             <div class="editor-choice-img">\
                                                 <img class="img_16_9" src="https://www.skynewsarabia.com/images/'+ getActualImageUrl(item.mediaAsset.imageUrl) +'" alt="'+ escapeDoubleAndSingleQuotes(item.mediaAsset.caption) +'" />'
                                                 + mediaIndicatorText + 
@@ -122,10 +122,10 @@ var template = function() {
                                                     '</span>\
                                                 </div>\
                                                 <h3 class="editor-choice-headline_text">'
-                                                    + item.headline + '33' +
+                                                    + item.headline + '44' +
                                                 '</h3>\
                                             </div>\
-                                        </a>\
+                                        </div>\
                                     </li>';
                 return watchNowItemContent;
 
