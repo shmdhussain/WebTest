@@ -56,7 +56,7 @@ var template = function() {
 
     // If there are
     return '<h2 class="sna_title_1 image">\
-                <a href="javascript:window.open(\"/most-popular-تفضيلات-القراء\");void(0);"  title="'+ data.sidebarWidgetTitle + '">\
+                <a href="/most-popular"  title="'+ data.sidebarWidgetTitle + '">\
                     <img src="https://www.skynewsarabia.com/static/web-rev/assets/img/svg-icons/watch_now.svg" alt="" role="presentation" />\
                     <span class="sna_title_1_text" >'+ data.sidebarWidgetTitle + '</span>\
                 </a>\
@@ -110,7 +110,7 @@ var template = function() {
                 
                 
                 watchNowItemContent = '<li class="watch_now_content_item">\
-                                        <div title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
+                                        <a  href="'+ contentItemUrl +'" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
                                             <div class="editor-choice-img">\
                                                 <img class="img_16_9" src="https://www.skynewsarabia.com/images/'+ getActualImageUrl(item.mediaAsset.imageUrl) +'" alt="'+ escapeDoubleAndSingleQuotes(item.mediaAsset.caption) +'" />'
                                                 + mediaIndicatorText + 
@@ -122,11 +122,17 @@ var template = function() {
                                                     '</span>\
                                                 </div>\
                                                 <h3 class="editor-choice-headline_text">'
-                                                    + item.headline + '55' +
+                                                    + item.headline +
                                                 '</h3>\
                                             </div>\
-                                        </div>\
+                                        </a>\
                                     </li>';
+                
+
+
+
+
+               
                 return watchNowItemContent;
 
 
@@ -154,15 +160,6 @@ var render = function() {
     list.innerHTML = template();
 };
 
-var openLinkOnClickOfContentItem = function() {
-    var listItems = document.querySelectorAll('.watch_now_content_item');
-    for (var i = 0; i < listItems.length; i++) {
-        listItems[i].addEventListener('touchstart ', function(e) {
-            window.open("https://www.skynewsarabia.com/", "_blank");
-        });
-    }
-}
-
 var videoDuration = function(runtime) {
     if(runtime != undefined)
      {
@@ -183,6 +180,5 @@ getJSON(contentApiUrl, function(responseData) {
     // Render the UI after getting data from BE API
     console.log(responseData);
     render();
-    openLinkOnClickOfContentItem();
 }, function(status) {
 });
