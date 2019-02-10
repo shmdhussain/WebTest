@@ -110,7 +110,7 @@ var template = function() {
                 
                 
                 watchNowItemContent = '<li class="watch_now_content_item">\
-                                        <a  href="javascript:window.open(\''+ contentItemUrl +'\');void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
+                                        <a  onclick="javascript:window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" href="javascript:window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
                                             <div class="editor-choice-img">\
                                                 <img class="img_16_9" src="https://www.skynewsarabia.com/images/'+ getActualImageUrl(item.mediaAsset.imageUrl) +'" alt="'+ escapeDoubleAndSingleQuotes(item.mediaAsset.caption) +'" />'
                                                 + mediaIndicatorText + 
