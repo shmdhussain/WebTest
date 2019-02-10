@@ -110,7 +110,7 @@ var template = function() {
                 
                 
                 watchNowItemContent = '<li class="watch_now_content_item">\
-                                        <a  onclick="javascript:window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" href="javascript:window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
+                                        <a  onclick="window.open(\''+ contentItemUrl +'\', \'_blank\');void(0)" href="javascript:void(0)" title="'+  escapeDoubleAndSingleQuotes(item.headline) +'">\
                                             <div class="editor-choice-img">\
                                                 <img class="img_16_9" src="https://www.skynewsarabia.com/images/'+ getActualImageUrl(item.mediaAsset.imageUrl) +'" alt="'+ escapeDoubleAndSingleQuotes(item.mediaAsset.caption) +'" />'
                                                 + mediaIndicatorText + 
@@ -122,17 +122,11 @@ var template = function() {
                                                     '</span>\
                                                 </div>\
                                                 <h3 class="editor-choice-headline_text">'
-                                                    + item.headline + '22' +
+                                                    + item.headline + '33' +
                                                 '</h3>\
                                             </div>\
                                         </a>\
                                     </li>';
-                
-
-
-
-
-               
                 return watchNowItemContent;
 
 
@@ -160,6 +154,15 @@ var render = function() {
     list.innerHTML = template();
 };
 
+var openLinkOnClickOfContentItem = function() {
+    var listItems = document.querySelectorAll('.watch_now_content_item');
+    for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('click', function(e) {
+            window.open("https://www.skynewsarabia.com/", "_blank");
+        });
+    }
+}
+
 var videoDuration = function(runtime) {
     if(runtime != undefined)
      {
@@ -180,5 +183,6 @@ getJSON(contentApiUrl, function(responseData) {
     // Render the UI after getting data from BE API
     console.log(responseData);
     render();
+    openLinkOnClickOfContentItem();
 }, function(status) {
 });
