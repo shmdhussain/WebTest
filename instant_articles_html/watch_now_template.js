@@ -122,7 +122,7 @@ var template = function() {
                                                     '</span>\
                                                 </div>\
                                                 <h3 class="editor-choice-headline_text">'
-                                                    + item.headline + 
+                                                    + item.headline + '22' +
                                                 '</h3>\
                                             </div>\
                                         </a>\
