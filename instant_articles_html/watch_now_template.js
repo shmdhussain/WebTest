@@ -122,7 +122,7 @@ var template = function() {
                                                     '</span>\
                                                 </div>\
                                                 <h3 class="editor-choice-headline_text">'
-                                                    + item.headline + '44' +
+                                                    + item.headline + '55' +
                                                 '</h3>\
                                             </div>\
                                         </div>\
@@ -157,7 +157,7 @@ var render = function() {
 var openLinkOnClickOfContentItem = function() {
     var listItems = document.querySelectorAll('.watch_now_content_item');
     for (var i = 0; i < listItems.length; i++) {
-        listItems[i].addEventListener('click', function(e) {
+        listItems[i].addEventListener('touchstart ', function(e) {
             window.open("https://www.skynewsarabia.com/", "_blank");
         });
     }
