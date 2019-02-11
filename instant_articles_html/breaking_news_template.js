@@ -2,6 +2,7 @@ var widgetContSelectorClass = "article-widget-holder"
 
 // var domain = "http://www.leg9.webdev.skynewsarabia.com";
 var domain = "https://www.skynewsarabia.com";
+var domain = "https://www.snawebdevtest.com";
 var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
 
 var getJSON = function(url, successHandler, errorHandler) {
