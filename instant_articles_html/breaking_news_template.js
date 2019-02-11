@@ -213,7 +213,7 @@ var template = function() {
 
 
             '</div><div class="more-content">\
-                <a href="/breaking-news-الأخبار-العاجلة" class="more-link"\
+                <a href="'+ domain +'/breaking-news-الأخبار-العاجلة" class="more-link"\
                         title="المزيد " style="margin: 0;">\
                     المزيد\
                 </a>\
@@ -227,7 +227,7 @@ preProcessDataItem = function(item) {
 
     var breakingItem = item;
     if (breakingItem.linkType == "INTERNAL" && breakingItem.contentType && breakingItem.contentId) {
-        breakingItem.link = "/" + breakingItem.contentType.toLowerCase().replace("-", "_") + "/" + breakingItem.contentId;
+        breakingItem.link = domain + "/" + breakingItem.contentType.toLowerCase().replace("-", "_") + "/" + breakingItem.contentId;
         if (breakingItem.isInfographicContent) {
                 breakingItem.link = breakingItem.link.replace("/image_gallery/", "/infographic/");
         }
