@@ -1,7 +1,8 @@
 var widgetContSelectorClass = "article-widget-holder"
 
 // var domain = "http://www.leg9.webdev.skynewsarabia.com";
-var domain = "https://www.skynewsarabia.com";
+// var domain = "http://fshwebt.skynewsarabia.com/";
+var domain = "https://www.snawebdevtest.com/";
 var contentApiUrl = domain + "/rest/v2/sidebar/article.json";
 
 var getJSON = function(url, successHandler, errorHandler) {
@@ -42,7 +43,7 @@ var template = function() {
 
     // If there are
     return '<h2 class="sna_title_1 image">\
-                <a href="/most-popular"  title="'+ data.sidebarWidgetTitle + '">\
+                <a href="'+ domain + '/most-popular"  title="'+ data.sidebarWidgetTitle + '">\
                     <img src="https://www.skynewsarabia.com/static/web-rev/assets/img/svg-icons/watch_now.svg" alt="" role="presentation" />\
                     <span class="sna_title_1_text" >'+ data.sidebarWidgetTitle + '</span>\
                 </a>\
@@ -55,7 +56,7 @@ var template = function() {
 
                 var mediaIndicatorText;
                 var mediaIndicatorImgIcon;
-                var contentItemUrl = "/" + item.type.toLowerCase() + "/" + item.id;
+                var contentItemUrl = domain + "/" + item.type.toLowerCase() + "/" + item.id;
                 if(item.type == 'IMAGE_GALLERY'){
                     if(item.isInfographicContent){
                         contentItemUrl = "/infographic/" + item.id;
