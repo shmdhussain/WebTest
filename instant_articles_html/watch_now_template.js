@@ -36,7 +36,7 @@ var escapeDoubleAndSingleQuotes = function (str) {
 var template = function() {
 
     // If there are no  items
-    if (data.breakingNews.length < 1) {
+    if (data.contentItems.length < 1) {
         return '';
     }
 
