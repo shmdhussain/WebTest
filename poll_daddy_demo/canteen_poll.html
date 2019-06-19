@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+		<title>SNA Canteen Name Poll</title>
+		<style>
+			.sna_survey_header{
+			    background-image: url('//i0.wp.com/files.polldaddy.com/a83b65308b90921f9f86f1fa9490a0a7-5cc9aad0d5ee1.png');
+			    background-repeat: no-repeat;
+			    background-position: center center;
+			    padding: 15px 0;
+			    margin: 0;
+			    background-size: cover;
+			        display: flex;
+			        justify-content: center;
+			}
+			
+			body{
+				min-height: 100vh;
+				background-color: #1a439f;
+			}
+			
+			.sna_logo {
+			    height: 22.5px;
+			}
+			@media only print, screen and (min-width: 768px){
+				.sna_logo {
+				    height: 38px;
+				}
+			}
+			
+			@media only print, screen and (min-width: 820px){
+				.sna_logo {
+				    max-width: 250px;
+				    height: auto;
+				    width: 22vw;
+				}
+			}
+
+
+
+			@font-face {
+			    font-family: "HelveticaNeueReg";
+			    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.eot");
+			    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.eot?#iefix") format("embedded-opentype"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff2") format("woff2"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff") format("woff"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.ttf") format("truetype"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.svg#HelveticaNeueW23forSKY-Reg_T02") format("svg");
+			    font-weight: 400;
+			    font-style: normal;
+			}
+
+			@font-face {
+			    font-family: "HelveticaNeueBold";
+			    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.eot");
+			    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.eot?#iefix") format("embedded-opentype"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff2") format("woff2"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff") format("woff"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.ttf") format("truetype"),
+			            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.svg#HelveticaNeueW23forSKY-Bd_T02") format("svg");
+			    font-weight: 800;
+			    font-style: normal;
+			}
+
+			* {
+				font-family: "HelveticaNeueReg"  !important;
+			}
+			#poll_daddy_embed_page .pds-box {
+			    background-color: white;
+			    max-width: 1040px;
+			    margin: 0 auto;
+			    margin-top: 130px;
+			    padding: 10px;
+			}
+			
+			@media only print, screen and (min-width: 768px){
+				#poll_daddy_embed_page .pds-box {
+				    
+				    padding: 40px;
+				}
+
+			}
+
+			#poll_daddy_embed_page .pds-question{
+				background: linear-gradient(to bottom,#999999 0%,#999999 50%,#888888 50%,#888888 100%);
+				color: white;
+				font-size: 18px;
+				padding: 20px;
+			}
+			
+
+			#poll_daddy_embed_page  .pds-answer{
+				background: #eee;
+				padding: 0 20px 30px;
+			}
+
+			#poll_daddy_embed_page  .pds-answer label{
+				padding-top: 20px;
+				display: inline-block;
+				padding-left: 10px;
+				cursor: pointer;
+			}
+			#poll_daddy_embed_page .pds-vote{
+				text-align: center;
+			}
+			#poll_daddy_embed_page .pds-vote a{
+				margin-top: 20px;
+				background-color: #ca4f49;
+				background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ca4f49),color-stop(1,#982414));
+				background: -moz-linear-gradient(center top,#ca4f49 5%,#982414 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ca4f49',endColorstr='#982414');
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				border: 0 solid #e1e1e1;
+				display: inline-block;
+				color: #fff;
+				padding: 5px 20px;
+				font-size: 1.214em;
+				text-decoration: none;
+				text-shadow: 0.059em 0.059em 0 #525252;
+				min-width: 200px;
+				text-align: center;
+				cursor: pointer;
+
+
+				line-height: 32px!important;
+				box-shadow: 0 0 0 4px #e1e1e1;
+				-moz-box-shadow: 0 0 0 4px #e1e1e1;
+				-webkit-box-shadow: 0 0 0 4px #e1e1e1;
+			}
+
+		</style>
+
+	</head>
+
+	<body id="poll_daddy_embed_page">
+	    
+	    <h1 class="sna_survey_header">
+
+	    <img src="https://i0.wp.com/files.polldaddy.com/405328c6ecb19e4414a8cc7a55dd061e-5cc9aac287c3c.png" class="sna_logo" alt="Sky News Arabia" title="Sky News Arabia"></h1>
+		
+		
+		<script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/10346068.js"></script>
+		<noscript><a href="https://poll.fm/10346068">What we should name the new Canteen ?</a></noscript>
+
+
+		
+	</body>
+</html>
