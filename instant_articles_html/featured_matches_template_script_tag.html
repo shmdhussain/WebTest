@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<style type="text/css">	
+			iframe{
+				width: 100%;
+				max-width: 500px;
+				min-height: 500px;
+			}
+		
+
+			
+		</style>
+		<script type="text/javascript">
+			
+			function iframeOnload(el) {
+				console.log(el);
+				// debugger;
+			}
+		</script>
+		    		
+	</head>
+
+	<body>
+	    
+	    <iframe onload="iframeOnload(this)" srcdoc='
+
+			    	<link rel="stylesheet" type="text/css" href="http://10.64.161.22:8088/instant_article_test/css/featured-match-styles.css">
+	    			<div dir="rtl" lang="ar" class="article-widget-holder sidebar_featured_match_comp"></div>
+					<script src="http://10.64.161.22:8088/instant_article_test/comp/featuredMatchesComp.js"></script>
+	    '>
+		
+
+	    </iframe>
+
+		
+	</body>
+</html>

@@ -1,0 +1,403 @@
+
+body,
+input {
+    font-family: "HelveticaNeueReg";
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+img {
+    color: transparent;
+}
+
+/*START:SNA Fonts and SNA specific reset styles */
+
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.eot?#iefix") format("embedded-opentype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff2") format("woff2"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff") format("woff"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.ttf") format("truetype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.svg#HelveticaNeueW23forSKY-Bd_T02") format("svg");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueReg";
+    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.eot?#iefix") format("embedded-opentype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff2") format("woff2"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff") format("woff"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.ttf") format("truetype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.svg#HelveticaNeueW23forSKY-Reg_T02") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "sna-icons";
+    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot");
+    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot?#iefix") format("embedded-opentype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff2") format("woff2"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff") format("woff"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.ttf") format("truetype"),
+        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.svg#snaicons") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "HelveticaNeueReg";
+}
+
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+/*END:SNA Fonts and SNA specific reset styles */
+/*START:SNA Util Styles */
+.invisible {
+    visibility: hidden;
+}
+/*END:SNA Util Styles */
+/*START:Article sidebar comp common styles */
+.article-widget-holder {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/*END:Article sidebar comp common styles */
+
+/*START:Color title styles */
+
+.sna_title_1 {
+    font-size: 22px;
+    padding: 0 20px;
+    padding-right: 8px;
+    background-color: #f5f5f5;
+    min-height: 35px;
+    line-height: 35px;
+    font-family: HelveticaNeueBold;
+    position: relative;
+}
+
+.sna_title_1:before {
+    content: " ";
+    top: 0;
+    right: 0;
+    display: block;
+    position: absolute;
+    background-clip: content-box;
+    width: 8px;
+    height: 100%;
+    background: #a20000;
+}
+
+
+
+.sna_title_1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.sna_title_1 .sna_title_1_text {
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sna_title_1.image .sna_title_1_text {
+    padding-right: 35px;
+}
+
+.comp_21_group_header {
+    margin-bottom: 20px;
+}
+/*END:Color title styles */
+
+
+
+/*START:Featured Matches comp styles */
+
+.comp_21_match_group_by_date {
+    margin-bottom: 5px;
+}
+
+.comp_21_match_date {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: #5e646d;
+}
+.comp_21_match_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid #c1c4cf;
+    text-decoration: none;
+    color: black;
+}
+.comp_21_match_item:last-child {
+    border-bottom: none;
+}
+
+
+.comp_21_match_item_team {
+    display: flex;
+    justify-content: center;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: calc(50% - (55px / 2));
+}
+.comp_21_match_item_team.comp_21_match_item_team_2 {
+    justify-content: flex-end;
+}
+.comp_21_match_item_team.comp_21_match_item_team_1 {
+    justify-content: flex-start;
+}
+
+.comp_21_match_item_team_logo_cont {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    position: relative;
+    width: 50px;
+    background-color: #f8f8f8;
+}
+
+.comp_21_match_item_team_logo:not(.sna_default_img) {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+    background-color: #f8f8f8;
+    width: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.comp_21_match_item_team_logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.comp_21_match_item_team_name {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
+    font-size: 14px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.comp_21_match_item_center {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    min-width: 55px;
+}
+
+.comp_21_match_item_center.score .comp_21_match_item_center_score, 
+.comp_21_match_item_center.live .comp_21_match_item_center_score {
+    padding: 3px 7px;
+    display: flex;
+    justify-content: center;
+    background-color: #5E6071;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    min-width: 50px;
+}
+
+.comp_21_match_item_center.fixture .comp_21_match_item_center_fixture, 
+.comp_21_match_item_center.fixture .comp_21_match_item_center_spl_status, 
+.comp_21_match_item_center.spl_status .comp_21_match_item_center_fixture, 
+.comp_21_match_item_center.spl_status .comp_21_match_item_center_spl_status {
+    padding: 3px 7px;
+    display: flex;
+    justify-content: center;
+    background-color: #5E6071;
+    color: white;
+    font-size: 14px;
+    min-width: 50px;
+}
+
+.comp_21_match_item_center.live .comp_21_match_item_center_score {
+    background-color: #be2f21;
+    color: white;
+}
+/*END:Featured Matches comp styles */
+
+/*START:More Btn styles */
+
+.more-content {
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+.more-link {
+    text-decoration: none;
+    min-width: auto;
+    margin-top: 20px;
+    border: 2px solid #000;
+    padding: 8px 20px;
+    color: #000;
+    border-radius: 7px;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0;
+}
+/*END:More Btn styles */
