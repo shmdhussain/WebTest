@@ -1,0 +1,229 @@
+@import "_settings.scss";
+@import "_visibility.scss";
+@import "hamburgers/hamburgers.scss";
+
+.hamburger:hover,
+.hamburger:focus {
+
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include sna_flex_container();
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.dc_hr_header {
+    @include sna_flex_container();
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 6px solid #293073;
+    padding: 10px 20px 20px;
+    flex: 0 0 auto;
+
+    @media #{$small-only} {
+        @include sna_flex_container_wrap(wrap);
+        padding: 10px 20px 0px;
+    }
+}
+
+.dc_hr_header_gov_logo {
+    @media #{$small-only} {
+        max-width: 90px;
+    }
+}
+
+.dc_hr_header_dc_logo {
+    @media #{$small-only} {
+        max-width: 120px;
+    }
+}
+
+.dc_hr_header_menu_icon {
+    @media #{$medium} {
+        display: none;
+    }
+}
+
+.dc_hr_header_text_cont {
+    @media #{$small-only} {
+        order: 1;
+        width: calc(100% + 40px);
+        padding-top: 10px;
+        @include sna_flex_container();
+        margin: 0 -20px;
+        align-items: center;
+    }
+}
+
+.dc_hr_header_text {
+
+
+    font-size: 16px;
+    font-weight: bold;
+
+    @media #{$small-only} {
+        padding-left: 10px;
+    }
+
+    @media #{$medium} {
+        font-size: 26px;
+        // @include responsive-unit($propName: "font-size", $unit: "px", $minVal: "36", $maxVal:"42", $minPoint:"768", $maxPoint:"819");
+    }
+
+    @media #{$medium-laptop-up} {
+        @include responsive-unit($propName: "font-size", $unit: "px", $minVal: "28", $maxVal:"32", $minPoint:"820", $maxPoint:"1279");
+    }
+
+    @media #{$large} {
+        font-size: 32px;
+    }
+
+
+
+
+}
+
+.dc_hr_body {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @media #{$medium} {
+        align-items: center;
+        flex: 1 0 auto;
+        width: auto;
+        // width: calc(100% - 350px);
+    }
+}
+
+.dc_hr_main_content {
+    @include sna_flex_container();
+    flex: 1 0 auto;
+    justify-content: center;
+
+    @media #{$small-only} {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+.dc_hr_nav_cont {
+    @media #{$small-only} {
+        flex: 0 0 auto;
+        width: 100%;
+        background-color: #292e71;
+        color: white;
+        display: none;
+        align-self: flex-start;
+    }
+
+    @media #{$medium} {
+        // display:none;
+        background-color: #292e71;
+        color: white;
+        padding: 25px 10px;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
+        width: 25%;
+        max-width: 320px;
+    }
+}
+
+.dc_hr_nav_item {
+    padding: 25px 10px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.25);
+}
+
+.menu_opened {
+    .dc_hr_nav_cont {
+        @media #{$small-only} {
+            display: block;
+        }
+    }
+}
+
+.dc_hr_login_cont {
+    background-color: #e6e8ec;
+    padding: 30px;
+    min-width: 300px;
+    width: 100%;
+    max-width: 510px;
+}
+
+.dc_hr_input {
+    @include sna_flex_container();
+    @include sna_flex_container_wrap(wrap);
+    padding-bottom: 20px;
+
+}
+
+.dc_hr_input_label {
+    @include sna_flex_item();
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.dc_hr_input_field {
+    @include sna_flex_item();
+    width: 100%;
+
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    padding-left: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    outline: none;
+    margin-top: 7px;
+
+
+    &:focus {
+        border: 1px solid #292e71;
+    }
+}
+
+.dc_hr_btn_cont {
+    @include sna_flex_container();
+    justify-content: center;
+    align-items: center;
+}
+
+.dc_hr_btn {
+
+    border: none;
+    font-size: 1.275rem;
+    padding: 15px;
+    border-radius: 7px;
+
+    color: #fff;
+    font-size: 1rem;
+    line-height: normal;
+    background-color: #292f72;
+    cursor: pointer;
+    min-width: 200px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #292f72;
+        color: #fff;
+    }
+
+    ;
+}

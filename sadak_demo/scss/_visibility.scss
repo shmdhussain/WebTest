@@ -1,0 +1,47 @@
+/* Visibility */
+.hide_large_only{
+	@media #{$large} {
+		display: none !important;
+	}
+}
+
+.hide_small_only{
+	@media #{$small-only} {
+		display: none !important;
+	}
+}
+
+.hide_medium_only{
+	@media #{$medium-only} {
+		display: none  !important;
+	}
+}
+//tablet and mobile hide
+.hide_medium_down{
+	@media #{$medium-down} {
+		display: none  !important;
+	}
+}
+//tablet and desktop hide
+.hide_medium_up{
+	@media #{$medium} {
+		display: none  !important;
+	}
+}
+
+
+.hide_tablet_down {
+    @media #{$tablet-down} {
+        display: none  !important;
+    }
+}
+
+.hide_medium_laptop_only {
+	@media #{$medium-laptop-only} {
+		display: none  !important;
+	}
+}
+
+.hide{
+	display: none  !important;
+}

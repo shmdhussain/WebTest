@@ -1,0 +1,62 @@
+@function lower-bound($range) {
+    @if length($range) <=0 {
+        @return 0;
+    }
+    @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+    @return nth($range, 2);
+}
+
+@mixin responsive-unit($propName, $unit, $minVal, $maxVal, $minPoint, $maxPoint) {
+    $res-mq: "#{$screen} and (min-width:#{$minPoint}px) and (max-width:#{$maxPoint}px)";
+    $res-max-mq: "#{$screen} and (min-width:#{$maxPoint}px)";
+
+    #{$propName}: #{$minVal}px;
+    @media #{$res-max-mq} {
+        #{$propName}: #{$maxVal}px;
+    }
+    @media #{$res-mq} {
+        #{$propName}: calc( #{$minVal}px + (#{$maxVal} - #{$minVal}) * (100vw - #{$minPoint}px) / (#{$maxPoint} - #{$minPoint}));
+    }
+}
+
+
+/*START:Flexbox Mixins */
+@mixin sna_flex_container($isImportant:"") {
+    @if $isImportant == 'important' {
+        display: -ms-flexbox  !important;
+        display: -webkit-flex  !important;
+        display: flex  !important;
+   } @else {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+   }
+}
+
+@mixin sna_flex_container_wrap($wrap-val: nowrap) {
+    //wrap value
+    -ms-flex-wrap: $wrap-val;
+    -webkit-flex-wrap: $wrap-val;
+    flex-wrap: $wrap-val;
+}
+
+@mixin sna_flex_item($grow:0, $shrink:0, $basis:auto){
+  -webkit-flex: $grow $shrink $basis;
+    flex: 0 0 auto;
+
+}
+
+@mixin sna_item_col_width_rel($columns_no, $total_columns_no) {
+    $width: ($columns_no / $total_columns_no) * 100%;
+    @include sna_item_col_width_abs($width);
+}
+
+@mixin sna_item_col_width_abs($col_width) {
+    width: $col_width;
+}
