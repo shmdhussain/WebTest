@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <title>index_analytics_issue_with_analytics_and_gtag</title>
+    <link rel="stylesheet" type="text/css" href="/lib/reset.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
+    <script src="js/jquery.min.js"></script>
+    
+    <!--START: Google anlytics.js script, added  by sky news arabia(our team) for our tracking !-->
+    <script>
+	    (function(i, s, o, g, r, a, m) {
+	        i['GoogleAnalyticsObject'] = r;
+	        i[r] = i[r] || function() {
+	            (i[r].q = i[r].q || []).push(arguments)
+	        }, i[r].l = 1 * new Date();
+	        a = s.createElement(o),
+	            m = s.getElementsByTagName(o)[0];
+	        a.async = 1;
+	        a.src = g;
+	        m.parentNode.insertBefore(a, m)
+	    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	    ga('create', 'UA-28465200-3', 'auto');
+
+	    if (typeof navigator.sendBeacon != "undefined") {
+	        ga('set', 'transport', 'beacon');
+	    }
+	    ga('send', 'pageview', {});
+    </script>
+    <!--END: Google anlytics.js script, added  by sky news arabia(our team) for our tracking !-->
+
+
+    <!--START: google analytics using gtag added by some third party which we(sky news arabia ) do not have control,
+     our analytics hits are going to this gtag instead of our analytics.js way(this is the issue) !-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-684253962"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-684253962');
+    </script>
+    <!--END: google analytics using gtag added by some third party which we(sky news arabia ) do not have control,
+     our analytics hits are going to this gtag instead of our analytics.js way(this is the issue) !-->
+
+
+</head>
+
+<body>
+    Welcome to BoilerPlate!!!
+    <div style="width:700px;height:700px">
+        <div id="testdiv"></div>
+    </div>
+    <script type="text/javascript" src="js/jwplayer-8.6.3/jwplayer.js"></script>
+    <script type="text/javascript">
+    jwplayer.key = "kgwsY/fcnsZ9bDqYHXD7DBRUd0fzxYGqdj2dpwi6rj5Y/w7G";
+    </script>
+    <script src="js/myscript--analytics-issue-8.6.3.js"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
