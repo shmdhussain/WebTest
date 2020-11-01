@@ -1,0 +1,60 @@
+ // this is copied to /scss/us_election_2020/_sna_us_election_map_variables.scss
+/*START:Variables for the sna us election mapp */
+$sna_usem_result_bar_state_bg_color: #E2E2E2;
+
+$sna_usem_result_bar_in_progress_bg_color: #d3d3d3;
+$sna_usem_result_bar_in_progress_active_bg_color: #EBEBEB;
+
+$sna_usem_result_bar_dem_bg_color: #333399;
+$sna_usem_result_bar_dem_active_bg_color: #6666cc;
+
+$sna_usem_result_bar_rep_bg_color: #cc0033;
+$sna_usem_result_bar_rep_active_bg_color: #ff0033;
+
+
+$sna_usem_result_bar_winner_cand_name_color: #FFF;
+$sna_usem_result_bar_winner_electoral_count_bg_color: #FFF;
+
+
+$sna_usem_result_bar_in_progress_vote_percent_color: #FFF;
+
+$sna_usem_result_bar_in_progress_cand_name_padding_mobile: 10px 20px;
+$sna_usem_result_bar_in_progress_cand_name_padding_tablet: 10px 20px;
+$sna_usem_result_bar_in_progress_cand_name_padding_small_desktop: 10px 20px;
+$sna_usem_result_bar_in_progress_cand_name_padding_desktop: 10px 20px;
+
+$sna_usem_result_bar_in_progress_vote_percent_padding_mobile: 10px 5px;
+$sna_usem_result_bar_in_progress_vote_percent_padding_tablet: 10px 25px;
+$sna_usem_result_bar_in_progress_vote_percent_padding_small_desktop: 10px 25px;
+$sna_usem_result_bar_in_progress_vote_percent_padding_desktop: 10px 25px;
+
+
+$sna_usem_result_bar_height_mobile: 72px + 20px;
+$sna_usem_result_bar_height_tablet: 96px  + 20px;
+$sna_usem_result_bar_height_small_desktop: 96px  + 20px;
+$sna_usem_result_bar_height_desktop: 96px + 20px;
+/*END:Variables for the sna us election map */
+
+
+/*START:for desktops */
+$sna_usem_page_max_width : 960px;
+/*END:for desktops */
+
+
+/*START:Legends */
+
+
+$legend_width_mobile: 30px;
+$legend_height_mobile: 20px;
+
+$legend_width_tablet: 25px;
+$legend_height_tablet: 25px;
+
+$legend_width_small_desktop: 30px;
+$legend_height_small_desktop: 30px;
+
+$legend_width_desktop: 30px;
+$legend_height_desktop: 30px;
+
+
+/*END:Legends */

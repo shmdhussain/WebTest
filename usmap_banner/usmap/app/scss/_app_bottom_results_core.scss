@@ -1,0 +1,159 @@
+// this is copied to /scss/us_election_2020/_sna_us_election_map_bottom_results_core.scss
+/*START:Bottom result bar styles containerr */
+
+
+.sna_usem_state_result_cont {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    @media #{$large} {
+    	position: static;
+    }
+}
+
+.show-breaking-news{
+	.sna_usem_state_result_cont {
+		bottom: 40px;
+	}	
+}
+
+.mobile_sticky_ldb_on{
+	.sna_usem_state_result_cont {
+		bottom: 50px;
+	}	
+}
+
+.mobile_sticky_ldb_on{
+	&.show-breaking-news{
+		.sna_usem_state_result_cont {
+			bottom: 90px;
+		}	
+	}
+}
+
+
+/*START:state which comes in bottom */
+.sna_usem_state_result_state_info {
+    background-color: $sna_usem_result_bar_state_bg_color;
+    text-align: center;
+    padding: 10px 10px;
+
+    @media #{$medium} {
+        font-size: 28px;
+        max-width: $sna_usem_page_max_width;
+        margin: 0 auto;
+    }
+}
+
+/*END:state which comes in bottom */
+
+
+/*START:in progress state */
+.sna_usem_state_result_progress_row {
+    display: flex;
+    justify-content: space-between;
+    font-family: HelveticaNeueBold;
+
+    @media #{$medium} {
+        font-size: 28px;
+    	max-width: $sna_usem_page_max_width;
+    	margin: 0 auto;
+    }
+}
+
+.sna_usem_state_result_progress_row_rep,
+.sna_usem_state_result_progress_row_dem {
+    display: flex;
+
+    @media #{$medium} {
+        min-width: 300px;
+    }
+}
+
+.sna_usem_state_result_progress_row_dem_name {
+    order: 1;
+}
+
+.sna_usem_state_result_progress_row_dem_name,
+.sna_usem_state_result_progress_row_rep_name {
+    padding: $sna_usem_result_bar_in_progress_cand_name_padding_mobile;
+    background-color: #FFF;
+    text-align: center;
+
+    @media #{$medium} {
+        flex: 1 0 auto;
+    }
+}
+
+.sna_usem_state_result_progress_row_dem_vote_percent,
+.sna_usem_state_result_progress_row_rep_vote_percent {
+    padding: $sna_usem_result_bar_in_progress_vote_percent_padding_mobile;
+    color: $sna_usem_result_bar_in_progress_vote_percent_color;
+
+    @media #{$medium} {
+        padding: $sna_usem_result_bar_in_progress_vote_percent_padding_tablet;
+    }
+
+    @media #{$large} {
+        padding: $sna_usem_result_bar_in_progress_vote_percent_padding_desktop;
+    }
+
+    span {
+        display: inline-block;
+        text-align: center;
+        min-width: 5ch;
+    }
+}
+
+.sna_usem_state_result_progress_row_dem_vote_percent {
+    background-color: $sna_usem_result_bar_dem_bg_color;
+}
+
+.sna_usem_state_result_progress_row_rep_vote_percent {
+    background-color: $sna_usem_result_bar_rep_bg_color;
+}
+
+/*END:in progress state */
+
+/*START:winner state */
+.sna_usem_state_result_winner_row {
+    display: flex;
+    align-items: center;
+    font-family: HelveticaNeueBold;
+
+    @media #{$medium} {
+        font-size: 28px;
+    	max-width: $sna_usem_page_max_width;
+    	margin: 0 auto;
+    }
+}
+
+.sna_usem_state_result_winner_row.dem_winner .sna_usem_state_result_winner_row_right {
+    background-color: $sna_usem_result_bar_dem_bg_color;
+}
+
+.sna_usem_state_result_winner_row.rep_winner .sna_usem_state_result_winner_row_right {
+    background-color: $sna_usem_result_bar_rep_bg_color;
+}
+
+.sna_usem_state_result_winner_row_right {
+    flex: 1 0 auto;
+    padding: 10px 10px;
+    color: $sna_usem_result_bar_winner_cand_name_color;
+}
+
+.sna_usem_state_result_winner_row_left {
+    padding: 10px 10px 10px 10px;
+    background-color: $sna_usem_result_bar_winner_electoral_count_bg_color;
+}
+
+.sna_usem_state_result_winner_row_electoral_votes {
+    display: inline-block;
+    min-width: 2ch;
+}
+
+/*END:winner state */
+
+/*END:Bottom result bar styles container */

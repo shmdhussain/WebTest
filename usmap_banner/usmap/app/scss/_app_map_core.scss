@@ -1,0 +1,133 @@
+// this is copied to /scss/us_election_2020/_sna_us_election_map_core.scss
+#map text:hover {
+    cursor: pointer;
+}
+
+.sna_us_map_cont{
+	max-width: $sna_usem_page_max_width;
+	margin: 0 auto;
+}
+
+
+#map{
+	
+	width: 100%; 
+	margin: 0 auto 0;
+	@media #{$medium} {
+		margin: 0 auto 0;
+	}
+	@media #{$medium-laptop-up} {
+		margin: 0 auto 0;
+	}
+	@media #{$large} {
+		margin: 0 auto 0;
+	}
+	
+}
+
+
+/*START:on map svg when user selected particular state highlight itt */
+#map path,
+#map rect {
+    &.selected {
+        fill: $sna_usem_result_bar_in_progress_active_bg_color;
+
+        &.dem_winner {
+            fill: $sna_usem_result_bar_dem_active_bg_color;
+        }
+
+        &.rep_winner {
+            fill: $sna_usem_result_bar_rep_active_bg_color;
+        }
+
+    }
+}
+
+/*END:on map svg when user selected particular state highlight it */
+
+
+/*START:Legends Container */
+.sna_usem_legend_cont{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 10px 10px;
+	justify-content: space-between;
+	@media #{$medium} {
+		padding: 20px 10px 20px;
+		justify-content: flex-start;
+	}
+}
+
+
+.sna_usem_legend_item{
+
+
+	&:not(:last-child){
+		padding-left: 0;
+		@media #{$medium} {
+			padding-left: 30px;
+		}
+    }
+	
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    // flex: 0 0 auto;
+    // width: 33.33%;
+    @media #{$medium} {
+    	font-size: 14px;
+    }
+    @media #{$large} {
+    	font-size: 16px;
+    }
+
+}
+
+
+.sna_usem_legend_item_dem{
+	.sna_usem_legend_item_color{
+		background-color: $sna_usem_result_bar_dem_bg_color;
+	}
+}
+
+.sna_usem_legend_item_rep{
+	.sna_usem_legend_item_color{
+		background-color: $sna_usem_result_bar_rep_bg_color;
+	}
+}
+
+.sna_usem_legend_item_in_progress{
+	.sna_usem_legend_item_color{
+		background-color: $sna_usem_result_bar_in_progress_bg_color;
+	}
+}
+
+
+.sna_usem_legend_item_color{
+	width: $legend_width_mobile;
+	height: $legend_height_mobile ;
+	margin-left: 5px;
+	@media #{$medium} {
+		margin-left: 5px;
+		width: $legend_width_tablet;
+		height: $legend_height_tablet ;
+	}
+
+	@media #{$medium-laptop-up} {
+		width: $legend_width_small_desktop;
+		height: $legend_height_small_desktop ;
+	}
+	// @media #{$large} {
+	// 	width: $legend_width_mobile;
+	// 	height: $legend_height_mobile ;
+	// }
+}
+/*END:Legends Container */
+
+
+/*START:Last updated time */
+.sna_usem_last_updated_time{
+	display: none;
+}
+/*END:Last updated time */

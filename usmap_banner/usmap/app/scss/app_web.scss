@@ -1,0 +1,53 @@
+@import "_fonts_app.scss";
+@import "app.scss";
+
+// body{
+// 	display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     flex-direction: column;
+// }
+
+// h1{
+
+// 	flex: 0 0 auto;
+// }
+
+// #map{
+// 	width: 100%;
+// 	flex: 1 0 auto;
+// 	overflow: hidden;
+// 	touch-action: none;
+// }
+
+
+@import "_app_map_tablet.scss";
+@import "_app_map_small_desktop.scss";
+@import "_app_map_desktop.scss";
+
+
+#map{
+	overflow: hidden;
+}
+
+.sna_us_map_and_legend_cont {
+	box-shadow: 0 1.5px 3px 0 rgba(0,35,64,0.05);
+	background-color: #fff;
+    // margin-bottom: 10px;
+}
+
+
+.sna_usem_last_updated_time{
+	padding: 10px 0px 0px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    flex: 0 0 auto;
+    width: 100%;
+    display: block;
+    @media #{$medium} {
+    	margin-right: auto;
+    	width: auto;
+    	align-self: flex-end;
+    }
+}
