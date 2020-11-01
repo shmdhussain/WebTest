@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="google" content="notranslate">
+    <title>الانتخابات الأميريكية ٢٠٢٠</title>
+        
+    <!-- build:css css/snaUsElectionBundle.css -->
+    <link rel="stylesheet" type="text/css" href="css/app_web.css"></link>
+    <!-- <link rel="stylesheet" href="https://asset1.skynewsarabia.com/asset/1643183700/F0B2FFC6685E074429C50F623881AFED/styles/sna-us-election-map-head.css"> -->
+    <!-- endbuild -->
+</head>
+
+<body>
+
+
+
+    
+    <!--START:  Result counter-->
+    <style>
+            .manual-override .candidate-name .number {
+                opacity: 0 !important;
+            }
+            .manual-override .candidate-name span.name {
+                top: 10px !important
+            }
+            .counter-widget {
+                width: calc(100% - 20px);
+                background-color: #fff;
+                box-sizing: border-box;
+                box-shadow: 0 1.5px 3px 0 rgba(0,35,64,0.05);
+                margin: 0 auto 20px;
+            }
+            .counter-widget a {
+                display: block;
+                padding: 35px 10px;
+            }       
+            .counter-main {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                position: relative;
+            }
+            .counter-main-dem, .counter-main-rep {
+                display: flex;
+                align-items: flex-end;
+            }
+            .counter-main-center {
+                width: 100%;
+                background: #d3d3d3;
+                height: 58px;
+                display: flex;
+                justify-content: space-between; 
+                position: relative;
+            }
+            .manual-override .rep-progress , .manual-override .dem-progress {
+                width: 0% !important;
+            }
+            .candidate-name {
+                color: #fff;
+                font-size: 26px;
+                font-family: "HelveticaNeueReg";
+                text-align: center;
+                padding: 10px 20px;
+            }
+            .candidate-name span {
+                display: block;
+                line-height: initial;
+            }
+            .candidate-name .number {
+                font-family: "HelveticaNeueBold";
+                font-size: 38px;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+            .counter-main-dem .candidate-name {
+                background-color: #6666cc;
+            }
+            .counter-main-rep .candidate-name {
+                background-color: #ff0033;
+            }
+            .use-logo {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .vote-details {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+            .votes-count-center {
+                font-family: "HelveticaNeueReg";
+                color: #232323;
+                font-size: 20px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .dem-popular-votes span, .rep-popular-votes span {
+                font-family: "HelveticaNeueReg";
+                color: #232323;
+                font-size: 20px;
+            }
+            .dem-popular-votes, .rep-popular-votes {
+                display: flex;
+                align-items: center;
+            }
+            .rep-popular-votes .count, .dem-popular-votes .desc-text {
+                margin: 0 5px;
+            }
+            .center-separator {
+                width: 1px;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                background: #000;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                height: 100%;
+                transform: translate(-1px, 0);
+                box-sizing: content-box;
+            }
+            
+            .center-separator:after, .center-separator:before {
+                bottom: -8px;
+                left: 50%;
+                border: solid transparent;
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            .center-separator:after {
+                border-bottom-color: #000;
+                border-width: 8px;
+                margin-left: -8px;
+            }
+            .rep-progress {
+                background: #cc0033;
+                width: 0;
+                transition: width 0.5s;
+            }
+            .dem-progress {
+                background: #333399;
+                width: 0;
+                transition: width 0.5s;
+            }
+            .winner-sign {
+                display: none;
+            }
+            .winner-sign img{
+                max-width: 26px;
+                width: 100%;
+            }
+            .clr-dem {
+                color: #333399;
+            }
+            .clr-rep {
+                color: #cc0033;
+            }
+            .use-logo img {
+                width: 240px;
+            }
+            .candidate-name span.name {
+                position: relative;
+                top: 20px;
+                transition: top 0.5s;
+            }
+        @media only screen and (max-width: 360px) {
+            .candidate-img {
+                display: none;
+            }
+            .use-logo {
+                top: -6px;
+            }
+            span.desc-text {
+                display: none;
+            }
+            .count {
+                margin: 0 !important;
+            }
+            .dem-popular-votes .winner-sign {
+                margin-right: 7px;
+            }
+            .rep-popular-votes .winner-sign {
+                margin-left: 7px;
+            }
+        }
+            
+            @media only screen and (max-width: 767px) {
+                .manual-override .candidate-name .number {
+                    opacity: 0 !important;
+                }
+                .manual-override .candidate-name span.name {
+                    top: 10px !important
+                }
+                .candidate-name span.name {
+                    top: 10px;
+                }
+                .candidate-img img {
+                    width: 52px;
+                }
+                .candidate-name {
+                    padding: 5px 10px;
+                    font-size: 14px;
+                }
+                .candidate-name .number {
+                    font-size: 16px;
+                }
+                
+                .counter-main-center {
+                    height: 28px;
+                }
+                .manual-override .counter-main-center {
+                    height: 22px;
+                }
+                .use-logo img {
+                    width: 104px;
+                }
+                .counter-widget {
+                    order: -1;
+                }
+                .counter-widget a {
+                    padding: 25px 10px;
+                }
+                .winner-sign img {
+                    width: 18px;
+                }
+                .dem-popular-votes span, .rep-popular-votes span {
+                    font-size: 14px;
+                }
+                .votes-count-center {
+                    font-size: 16px;
+                }
+                .vote-details {
+                    margin-top: 6px;
+                }
+                .center-separator:after, .center-separator:before {
+                    bottom: -6px;
+                }
+                .center-separator:after {
+                    border-width: 5px;
+                    margin-left: -5px;
+                }
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                .candidate-name {
+                    padding: 10px 16px;
+                    font-size: 20px;
+                }
+                .candidate-img img {
+                    width: 90px;
+                }
+                .use-logo img {
+                    width: 200px;
+                }
+                .candidate-name .number {
+                    font-size: 24px;
+                }
+                .counter-main-center {
+                    height: 48px;
+                }
+                .manual-override .counter-main-center {
+                    height: 36px;
+                }
+                .candidate-name span.name {
+                    top: 10px;
+                }
+                .manual-override .candidate-name .number {
+                    opacity: 0 !important;
+                }
+                .manual-override .candidate-name span.name {
+                    top: 10px !important
+                }
+            }
+            .counter-widget a{
+                text-decoration: none;
+            }
+
+        </style>
+        
+        
+        <div class="counter-widget" id="countDown">
+            <a href="/us-election/map" title="الانتخابات الامريكية 2020">
+                <div class="counter-main">
+                    <div class="use-logo">
+                        <img src="https://www.skynewsarabia.com/static/web-rev/img/us-elections/2020/us-election-logo.svg" alt="us-election-logo">
+                    </div>
+                    <div class="counter-main-rep">
+                        <div class="candidate-img">
+                            <img alt="trump" src="https://www.skynewsarabia.com/static/web-rev/img/us-elections/2020/trump@2x.jpg">
+                        </div>
+                        <div class="candidate-name">
+                            <span class="name">ترامب</span>
+                            <span class="number">&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="counter-main-center">
+                        <div class="rep-progress"></div>
+                        <div class="center-separator"></div>
+                        <div class="dem-progress"></div>
+                    </div>
+                    <div class="counter-main-dem">
+                        <div class="candidate-name">
+                            <span class="name">بايدن</span>
+                            <span class="name" style="visibility: hidden; height: 0;">ترامب</span>
+                            <span class="number">&nbsp;</span>
+                        </div>
+                        <div class="candidate-img">
+                            <img alt="biden" src="https://www.skynewsarabia.com/static/web-rev/img/us-elections/2020/biden@2x.jpg">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="vote-details">
+                    <div class="rep-popular-votes">
+                        <span class="winner-sign">
+                            <img alt="winner-sign" src="https://www.skynewsarabia.com/static/web-rev/img/us-elections/2020/winner-sign.svg">
+                        </span>
+                        <span class="count">0</span>
+                        <span class="desc-text">صوت</span>
+                    </div>
+                    <div class="votes-count-center">270 صوت</div>
+                    <div class="dem-popular-votes">
+                        <span class="count">0</span>
+                        <span class="desc-text">صوت</span>
+                        <span class="winner-sign">
+                            <img alt="winner-sign" src="https://www.skynewsarabia.com/static/web-rev/img/us-elections/2020/winner-sign.svg">
+                        </span>
+                    </div>          
+                </div>
+            </a>
+        </div>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function(event) {
+
+                var apiUrl = 'http://vmtwebuselections.ext.webdev.skynewsarabia.com/rest/national-result.json',
+                
+                interval = 30000;  // 1000 = 1 second, 3000 = 3 seconds
+                function getData() {
+                    $.ajax({
+                            type: 'GET',
+                            url: apiUrl,
+                            success: function (response) {
+                                
+                                var demElectoralVotesPercentage = response.demElectoralVotes * 100 / 538,
+                                    repElectoralVotesPercentage = response.repElectoralVotes * 100 / 538;
+                                    
+                                $('.rep-progress')[0].style.width = repElectoralVotesPercentage + '%';
+                                $('.dem-progress')[0].style.width = demElectoralVotesPercentage + '%';
+                                
+                                if(response.demPopularVotes != undefined || response.demPopularVotes != null) {
+                                    $('.dem-popular-votes .count')[0].innerHTML = response.demPopularVotes.toString().split( /(?=(?:\d{3})+(?:\.|$))/g ).join( "," );
+                                }
+                                
+                                if(response.repPopularVotes != undefined || response.repPopularVotes != null) {
+                                    $('.rep-popular-votes .count')[0].innerHTML = response.repPopularVotes.toString().split( /(?=(?:\d{3})+(?:\.|$))/g ).join( "," );
+                                }
+                                
+                                
+                                if(response.demElectoralVotes != undefined || response.demElectoralVotes != null) {
+                                    $('.counter-main').removeClass('manual-override');
+                                    $('.counter-main-dem .candidate-name .name').css('top', '0');
+                                    $('.counter-main-dem .candidate-name .number')[0].innerHTML = response.demElectoralVotes;
+                                    $('.counter-main-dem .candidate-name .number').css('opacity', '1');
+                                }
+                                
+                                if(response.repElectoralVotes != undefined || response.repElectoralVotes != null) {
+                                    $('.counter-main').removeClass('manual-override');
+                                    $('.counter-main-rep .candidate-name .name').css('top', '0');
+                                    $('.counter-main-rep .candidate-name .number')[0].innerHTML = response.repElectoralVotes;
+                                    $('.counter-main-rep .candidate-name .number').css('opacity', '1');
+                                }
+                                
+                                if (response.repElectoralVotes == undefined && response.demElectoralVotes == undefined) {
+                                    $('.counter-main').addClass('manual-override');
+                                }
+                                
+                                if(response.demWinner == true) {
+                                    $('.rep-popular-votes .winner-sign').hide();
+                                    $('.dem-popular-votes .winner-sign').show();
+                                    $('.votes-count-center').text('فوز بايدن').addClass('clr-dem');
+                                } else if (response.repWinner == true) {
+                                    $('.dem-popular-votes .winner-sign').hide();
+                                    $('.rep-popular-votes .winner-sign').show();
+                                    $('.votes-count-center').text('فوز ترامب').addClass('clr-rep');
+                                } else {
+                                    $('.winner-sign').hide();
+                                    $('.votes-count-center').text('270 صوت').removeClass('clr-dem').removeClass('clr-rep');;
+                                }                                   
+                                
+                            },
+                            complete: function (data) {
+                                // Schedule the next
+                                setTimeout(getData, interval);
+                            }
+                    });
+                }
+                getData();
+
+            })
+        </script>
+
+    <!--END:  Result counter-->
+
+
+    <!--START:  Maps-->
+
+
+    
+    <style type="text/css">
+           .sna_usem_state_result_progress_row, .sna_usem_state_result_state_info {
+             max-width: none;
+           }
+        .sna_us_map_cont{
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 100%;
+                    max-width: none;
+        }
+        .sna_us_map_cont {
+            padding: 0 10px
+        }
+
+        @media only print, screen and (min-width: 820px) {
+            .sna_us_map_cont {
+                padding:0 10px
+            }
+        }
+
+        @media only print, screen and (min-width: 1280px) {
+            .sna_us_map_cont {
+                padding:0 10px
+            }
+        }
+    </style>
+    <div data-sna-us-election-api-domain='https://uselection.skynewsarabia.com' class="sna_us_map_cont">
+
+
+
+        <div class="sna_us_map_and_legend_cont">
+            <!--START:  map container-->
+            <div id="map" class=""></div>
+            <!--END:  map container-->
+
+            <!--START:  Legends Bar-->
+            <div class="sna_usem_legend_cont ">
+
+                <div class="sna_usem_legend_item sna_usem_legend_item_dem">
+                    <div class="sna_usem_legend_item_color">
+
+                    </div>
+                    <div class="sna_usem_legend_item_text">
+                        فوز الديمقراطيين
+                    </div>
+                </div>
+
+                <div class="sna_usem_legend_item sna_usem_legend_item_rep">
+                    <div class="sna_usem_legend_item_color">
+
+                    </div>
+                    <div class="sna_usem_legend_item_text">
+                        فوز الجمهوريين
+                    </div>
+                </div>
+
+                <div class="sna_usem_legend_item sna_usem_legend_item_in_progress">
+                    <div class="sna_usem_legend_item_color">
+
+                    </div>
+                    <div class="sna_usem_legend_item_text">
+                        لم تحدد
+                    </div>
+                </div>
+
+                <!--START:  last Updated time -->
+                <div class="sna_usem_last_updated_time">
+                    آخر تحديث: OCT, 3, 2020, 20:10
+                </div>
+                <!--END:  last Updated time -->
+
+
+            </div>
+            <!--END:  Legends Bar-->
+        </div>
+
+        <!--START:  legend bar in the bottom-->
+        <div class="sna_usem_state_result_cont hide">
+
+            <!--START:  when rep is winner-->
+            <div class="hide sna_usem_state_result_winner_row rep_winner">
+                <div class="sna_usem_state_result_winner_row_right">
+                    الفائز ترامب
+                </div>
+                <div class="sna_usem_state_result_winner_row_left">
+                    الكليات الانتخابية : <span class="sna_usem_state_result_winner_row_electoral_votes">0</span>
+                </div>
+            </div>
+            <!--END:  when rep is winner-->
+
+            <!--START:  when dem is winner-->
+            <div class="hide sna_usem_state_result_winner_row dem_winner">
+                <div class="sna_usem_state_result_winner_row_right">
+                    الفائز بايدن
+                </div>
+                <div class="sna_usem_state_result_winner_row_left">
+                    الكليات الانتخابية : <span class="sna_usem_state_result_winner_row_electoral_votes">0</span>
+                </div>
+            </div>    
+            <!--END:  when dem is winner-->
+
+
+
+            <!--START:  when counting didn't start or counting in progress-->
+            <div class="hide sna_usem_state_result_progress_row">
+
+                <div class="sna_usem_state_result_progress_row_rep">
+                    <div class="sna_usem_state_result_progress_row_rep_name">
+                        ترامب
+                    </div>
+                    <div dir="ltr" class="sna_usem_state_result_progress_row_rep_vote_percent"><span>0%</span></div>
+                </div>
+                <div class="sna_usem_state_result_progress_row_dem">
+                    <div class="sna_usem_state_result_progress_row_dem_name">
+                        بايدن
+                    </div>
+                    <div dir="ltr" class="sna_usem_state_result_progress_row_dem_vote_percent"><span>0%</span></div>
+                </div>
+                
+            </div>      
+            <!--END:  when counting didn't start or counting in progress-->
+
+
+
+
+            <!--START:  state info-->
+            <div class="sna_usem_state_result_state_info">
+                
+            </div>
+            <!--END:  state info-->
+        </div>
+        <!--END:  legend bar in the bottom-->
+    </div>
+    <style type="text/css">
+        
+    </style>
+    <script type="text/javascript">
+        // document.addEventListener('DOMContentLoaded', function(e) {
+        //       var script = document.createElement('script');
+        //       script.src = "https://asset1.skynewsarabia.com/asset/1643183700/FF4E6813D440FC59FBB049661F88740D/scripts/sna-us-election-map-foot.js";
+        //       script.async = false;
+        //       $(".sna_usem_legend_cont").removeClass("hide");
+        //       document.head.appendChild(script);
+        // });
+    </script>
+
+    <!--END:  Maps-->
+
+    
+
+    
+
+
+
+    <!-- build:js scripts/snaUsElectionBundleLib.js -->
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/raphael.js"></script>
+    <script src="scripts/jquery.usmap.js"></script>
+    <script src="scripts/hammer.min.js"></script>
+    <script src="scripts/modernizr.custom.min.js"></script>
+    <script src="//wurfl.io/wurfl.js"></script>
+    <!-- endbuild -->
+
+
+    <!-- build:js scripts/snaUsElectionBundleApp.js -->
+    <script src="scripts/viewportInfos.js"></script>
+    <script src="scripts/snaUsMap.js"></script>
+    <script src="scripts/snaUsMapBottomResultBar.js"></script>
+    <script src="scripts/snaUsMapWeb.js"></script>
+    <!-- endbuild -->
+
+
+
+
+</body>
+
+</html>
