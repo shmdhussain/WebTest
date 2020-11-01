@@ -14,8 +14,8 @@ jQuery(function($) {
     } else{
         // for desktop relayout map when the resizing happens 
         $(window).resize(debounce(function() {
-            clearInterval(useMapRefreshIntervalTimerId);
-            renderUsMap();
+            // clearInterval(useMapRefreshIntervalTimerId);
+            // renderUsMap();
         }, 500, false));
     }
     /*END: listen for orientation changes from portrait to landscape in tablet and mobile then do the map relayout*/

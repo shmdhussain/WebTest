@@ -526,8 +526,8 @@
       var neStates = this.neStates;
 
       // calculate the values for placing items
-      var neBoxX = 820;
-      var neBoxY = 220;
+      var neBoxX = 1000;
+      var neBoxY = 100;
       /*START: special case to contain all map view in single frame in mobile portrait*/
       if(window.snaDeviceTypeV1 == "MOBILE"){
         neBoxY = 150;

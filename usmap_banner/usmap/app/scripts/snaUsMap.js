@@ -72,7 +72,7 @@ window.usElectionMapConfig = {
 
 
         inProgressBgColor: "#D3D3D3",
-        inProgressHoverBgColor: "#EBEBEB",
+        inProgressHoverBgColor: "#898989",
 
         strokeColorForStateBorderRepWin: "#FFF",
         strokeColorForStateBorderDemWin: "#FFF",
@@ -112,6 +112,8 @@ function renderUsMap() {
 
     var div_map_content = $('<div id="map-content"></div>');
     var map_el_height = screen_w * aspect_ratio;
+    var map_video_el = $('<div class="sna_us_map_video_backdrop"><video autoplay muted loop src="media/us_election_bg.mp4"></video></div>')
+    var map_video_blur_el = $('<div class="sna_us_map_video_blur_backdrop"></div>')
 
 
     if (typeof setHeightForUsMapWeb != "undefined") {
@@ -128,6 +130,8 @@ function renderUsMap() {
         .css('width', '100%');
 
     $('#map').html(div_map_content);
+    $('#map').prepend(map_video_blur_el);
+    $('#map').prepend(map_video_el);
     /*END: adjust the map height according to viewport and add the map conainer to init the map*/
 
     if (!reqAlreadyInProgress) {
@@ -160,13 +164,14 @@ function renderUsMap() {
                 },
                 showLabels: true,
                 labelRadius: 0,
-                labelWidth: 35,
-                labelHeight: 20,
+                labelWidth: 75,
+                labelGap: 25,
+                labelHeight: 60,
                 labelTextStyles: {
-                    'font-size': screen_w >= 960 ? 11 : 9,
+                    'font-size': 20,
                     'fill': usElectionMapConfig.colors.inProgressLabelTextColor,
                     'stroke': 'none',
-                    'font-family': 'Arial,Helvetica,sans-serif',
+                    'font-family': 'HelveticaNeueReg',
                     'font-weight': 400
                 },
 

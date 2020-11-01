@@ -28,12 +28,14 @@
 
 #map{
 	overflow: hidden;
+    position: relative;
 }
 
 .sna_us_map_and_legend_cont {
 	box-shadow: 0 1.5px 3px 0 rgba(0,35,64,0.05);
 	background-color: #fff;
     // margin-bottom: 10px;
+
 }
 
 
@@ -50,4 +52,25 @@
     	width: auto;
     	align-self: flex-end;
     }
+}
+
+/*START:video on backdrop */
+.sna_us_map_video_backdrop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+.sna_us_map_video_blur_backdrop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.55);
+    // background-color: rgba(0,0,0, 0.5);
+}
+/*END:video on backdrop */
+
+.sna_usem_state_result_cont{
+    max-width: 1650px;
+    margin: 0 auto;
 }
