@@ -8,30 +8,10 @@
     bottom: 0;
     right: 0;
     z-index: 5;
-    @media #{$large} {
-    	position: static;
-    }
+    margin-bottom: 50px;
 }
 
-.show-breaking-news{
-	.sna_usem_state_result_cont {
-		bottom: 40px;
-	}	
-}
 
-.mobile_sticky_ldb_on{
-	.sna_usem_state_result_cont {
-		bottom: 50px;
-	}	
-}
-
-.mobile_sticky_ldb_on{
-	&.show-breaking-news{
-		.sna_usem_state_result_cont {
-			bottom: 90px;
-		}	
-	}
-}
 
 
 /*START:state which comes in bottom */
