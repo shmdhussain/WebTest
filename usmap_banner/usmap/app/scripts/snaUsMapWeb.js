@@ -34,7 +34,7 @@ function setHeightForUsMapWeb(mapElHeight) {
     console.log(mapElHeight);
 
     
-    mapElHeight = viewportHeight - (resultCounterHeight + 20);
+    mapElHeight = viewportHeight - (resultCounterHeight + 20 + 70 + 97);
 
     // console.log("map height" + mapElHeight);
 
