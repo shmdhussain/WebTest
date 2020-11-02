@@ -21,7 +21,7 @@
     padding: 10px 10px;
 
     @media #{$medium} {
-        font-size: 28px;
+        font-size: $sna_usem_result_bar_font_size_state;
         max-width: $sna_usem_page_max_width;
         margin: 0 auto;
     }
@@ -37,7 +37,7 @@
     font-family: HelveticaNeueBold;
 
     @media #{$medium} {
-        font-size: 28px;
+        font-size: $sna_usem_result_bar_font_size_result_bar;
     	max-width: $sna_usem_page_max_width;
     	margin: 0 auto;
     }
@@ -104,7 +104,7 @@
     font-family: HelveticaNeueBold;
 
     @media #{$medium} {
-        font-size: 28px;
+        font-size: $sna_usem_result_bar_font_size_result_bar;
     	max-width: $sna_usem_page_max_width;
     	margin: 0 auto;
     }

@@ -165,7 +165,7 @@ function renderUsMap() {
                 showLabels: true,
                 labelRadius: 0,
                 labelWidth: 75,
-                labelGap: 25,
+                labelGap: 20,
                 labelHeight: 60,
                 labelTextStyles: {
                     'font-size': 20,

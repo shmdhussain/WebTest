@@ -1,98 +1,107 @@
-body,
-input {
-    font-family: "HelveticaNeueReg";
+/* the below css are minified using the online tool https://cssminifier.com/ and put in watch_now_styles_min_for_prod.css then copied to fbInstantArticle.ftl */
+*,
+body {
+    box-sizing: border-box;
 }
 
-html,
+.sna_section_title_1 a,
+a {
+    text-decoration: none;
+}
+
 body,
-div,
-span,
+input {
+    font-family: HelveticaNeueReg;
+}
+
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
-    vertical-align: middle;
+    vertical-align: middle
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -104,27 +113,23 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
-}
-
-body {
-    line-height: 1;
+    display: block
 }
 
 ol,
 ul {
-    list-style: none;
+    list-style: none
 }
 
 blockquote,
 q {
-    quotes: none;
+    quotes: none
 }
 
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
     content: "";
     content: none;
 }
@@ -134,136 +139,105 @@ table {
     border-spacing: 0;
 }
 
-
 img {
     color: transparent;
 }
 
-
 @font-face {
-    font-family: "HelveticaNeueBold";
-    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.eot?#iefix") format("embedded-opentype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff2") format("woff2"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff") format("woff"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.ttf") format("truetype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.svg#HelveticaNeueW23forSKY-Bd_T02") format("svg");
+    font-family: HelveticaNeueBold;
+    src: url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.eot?#iefix) format("embedded-opentype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff2) format("woff2"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff) format("woff"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.ttf) format("truetype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Bd_T02.svg#HelveticaNeueW23forSKY-Bd_T02) format("svg");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "HelveticaNeueReg";
-    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.eot?#iefix") format("embedded-opentype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff2") format("woff2"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff") format("woff"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.ttf") format("truetype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.svg#HelveticaNeueW23forSKY-Reg_T02") format("svg");
+    font-family: HelveticaNeueReg;
+    src: url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.eot?#iefix) format("embedded-opentype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff2) format("woff2"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff) format("woff"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.ttf) format("truetype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueW23forSKY-Reg_T02.svg#HelveticaNeueW23forSKY-Reg_T02) format("svg");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "sna-icons";
-    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot");
-    src: url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot?#iefix") format("embedded-opentype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff2") format("woff2"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff") format("woff"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.ttf") format("truetype"),
-        url("https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.svg#snaicons") format("svg");
+    font-family: sna-icons;
+    src: url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot);
+    src: url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.eot?#iefix) format("embedded-opentype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff2) format("woff2"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.woff) format("woff"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.ttf) format("truetype"), url(https://www.skynewsarabia.com/static/web-rev/styles/sna-icons/snaicons.svg#snaicons) format("svg");
     font-weight: 400;
     font-style: normal;
 }
 
 body {
-    box-sizing: border-box;
     line-height: 1.5;
-    font-family: "HelveticaNeueReg";
-}
-
-* {
-    box-sizing: border-box;
+    font-family: HelveticaNeueReg;
 }
 
 .article-widget-holder {
     margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f8f8;
+    box-shadow: 0 1.5px 3px 0 rgba(0,35,64,0.05);
 }
-
-
-.sna_title_1 {
+.article-widget-body{
+    background-color: #fff;
+}
+.other-editor-choice{
+    padding: 0 10px;
+}
+.sna_section_title_1 {
     font-size: 22px;
-    padding: 0 20px;
-    padding-right: 8px;
-    background-color: #f5f5f5;
-    min-height: 35px;
-    line-height: 35px;
+    padding: 0 6px 0 0px;
+    min-height: 32px;
+    line-height: 32px;
     font-family: HelveticaNeueBold;
     position: relative;
+    margin-bottom: 10px;
 }
 
-.sna_title_1:before {
+.sna_section_title_1:before {
     content: " ";
     top: 0;
     right: 0;
     display: block;
     position: absolute;
     background-clip: content-box;
-    width: 8px;
+    width: 6px;
     height: 100%;
-    background: #a20000;
-}
-
-.sna_title_1.image {
-    margin-bottom: 10px;
-}
-
-.sna_title_1.image:before {
-    width: 0;
-}
-
-.sna_title_1 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.sna_title_1.image img {
-    height: 100%;
-    width: auto;
-    position: absolute;
-    right: 0;
-    background: #2f4fae;
-
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
+    background: #ac0000;
 }
 
 
 
-.sna_title_1 .sna_title_1_text {
+.sna_section_title_1 .sna_section_title_1_text {
     position: relative;
     z-index: 1;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
+    color: #232323;
 }
 
-.sna_title_1.image .sna_title_1_text {
-    padding-right: 35px;
+.sna_section_title_1_arrow_end .sna_section_title_1_text{
+    display: flex;
+}
+.sna_section_title_1_arrow_end .sna_section_title_1_text:after{
+    content: " ";
+    width: 32px;
+    background-image: url(http://localhost:8080/static/web-rev/assets/img/svg-icons/content_go_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 13px 15px;
+    margin-right: 10px;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 .watch_now_content_item {
     padding: 10px 0;
 }
 
 .watch_now_content_item:not(:last-child) {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid rgba(35,35,35,.25);
 }
 
 .watch_now_content_item>a {
@@ -277,7 +251,6 @@ a {
     width: 40%;
     position: relative;
 }
-
 
 .watch_now_content_item>a .editor-choice-headline {
     flex: 0 0 auto;
@@ -301,11 +274,11 @@ a {
     display: inline-block;
     margin-top: 0;
     position: relative;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     top: 0;
     left: 0;
     color: #000;
-    background: 0 0;
+    background: none;
     right: 0;
 }
 
@@ -313,7 +286,7 @@ a {
     content: "";
     position: absolute;
     width: 3px;
-    background: #a20000;
+    background: #ac0000;
     margin-left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -321,18 +294,19 @@ a {
 }
 
 .content_title_encloser {
-    padding-right: 6px;
-    color: #716363;
+    color: #232323;
     border-bottom: 0;
     padding-bottom: 0;
     padding-right: 8px;
+    font-family: HelveticaNeueBold,"Times New Roman";
+
 }
 
 .content_list_media_indicator {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(83, 131, 180, 0.8);
+    top: 0;
+    left: 0;
+    background-color: rgba(171,29,35,0.75);
     z-index: 1;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -348,7 +322,7 @@ a {
     padding-left: 6px;
     top: 2px;
     position: relative;
-    font-size: 0.75rem;
+    font-size: .75rem;
 }
 
 .content_list_media_indicator_svg_cont {
@@ -361,24 +335,112 @@ a {
     max-width: 100%;
 }
 
-.more-content {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0;
-    padding-bottom: 20px;
+
+.play_icon {
+    background-color: rgba(171,29,35,0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 0;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 5px 5px;
+    width: 25px;
+    height: 25px;
 }
 
-.more-content .more-link {
-    text-decoration: none;
-    min-width: auto;
-    margin-top: 20px;
-    border: 2px solid #000;
-    padding: 8px 20px;
-    color: #000;
-    font-size: 1.2rem;
-    margin: 0;
+.play_icon .play_icon_svg {
+    height: 100%;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
 }
+
+.content_from_title.live_story {
+    padding-right: 24px;
+}
+
+.content_from_title.live_story:after {
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    border-radius: 50%;
+    animation: lst_blink 1s infinite alternate;
+    line-height: 1;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    right: 8px;
+    width: 7px;
+    height: 7px;
+
+    
+}
+@media (prefers-reduced-motion: reduce) {
+    .content_from_title.live_story:after {
+        animation: none;
+    }
+}
+
+
+.content_from_title.live_story::before {
+    content: " ";
+    border-radius: 50%;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+
+.content_from_title.on_content_top.live_story {
+    background: #ac0000;
+    padding: 1px 24px 3px 8px;
+}
+
+.on_content_top.live_story .content_title_encloser {
+    color: #fff;
+    padding-right: 0;
+    font-family: HelveticaNeueReg;
+}
+
+.content_from_title.on_content_top.exclusive-coverage {
+    background: #032c67;
+    padding: 3px 8px;
+}
+.content_from_title.on_content_top.exclusive-coverage:before {
+    display: none;
+}
+.content_from_title.on_content_top.exclusive-coverage .content_title_encloser{
+    color: #fff;
+    padding-right: 0;
+    font-family: HelveticaNeueReg;
+}
+
+@-webkit-keyframes lst_blink {
+    0% {
+        opacity: .3
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes lst_blink {
+    0% {
+        opacity: .3
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
