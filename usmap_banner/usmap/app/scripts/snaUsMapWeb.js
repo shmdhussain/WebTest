@@ -39,7 +39,7 @@ function setHeightForUsMapWeb(mapElHeight) {
         mapElHeight = viewportHeight - (resultCounterHeight + 20 + 70 + 146 + 97 + 282);
     }
     else{
-        mapElHeight = viewportHeight - (resultCounterHeight + 20 + 70 + 146 + 0);
+        mapElHeight = viewportHeight - (resultCounterHeight + 20 + 70 + 146 + 75 + 0);
     }
 
     // console.log("map height" + mapElHeight);
