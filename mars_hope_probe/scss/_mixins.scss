@@ -1,0 +1,62 @@
+/*START:Flexbox Mixins */
+@mixin sna_flex_container($isImportant:"") {
+    @if $isImportant=='important' {
+        display: -ms-flexbox !important;
+        display: -webkit-flex !important;
+        display: flex !important;
+    }
+
+    @else {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+}
+
+@mixin sna_flex_container_wrap($wrap-val: nowrap) {
+    //wrap value
+    -ms-flex-wrap: $wrap-val;
+    -webkit-flex-wrap: $wrap-val;
+    flex-wrap: $wrap-val;
+}
+
+@mixin sna_flex_item($grow:0, $shrink:0, $basis:auto) {
+    -webkit-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+
+}
+
+@mixin sna_item_col_width_rel($columns_no, $total_columns_no) {
+    $width: ($columns_no / $total_columns_no) * 100%;
+    @include sna_item_col_width_abs($width);
+}
+
+@mixin sna_item_col_width_abs($col_width) {
+    width: $col_width;
+}
+
+/*END:Flexbox Mixins */
+
+@function lower-bound($range) {
+    @if length($range) <=0 {
+        @return 0;
+    }
+
+    @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+
+    @return nth($range, 2);
+}
+
+//inspired by mike riethmullers concept for responsive units
+@mixin responsive-unit($propName, $minValWithoutUnit, $maxValWithoutUnit, $minViewportWidthInPx, $maxViewportWidthInPix,  $unitForValue: "px") {
+    $res-mq: "#{$screen} and (min-width:#{$minViewportWidthInPx}px) and (max-width:#{$maxViewportWidthInPix}px)";
+    @media #{$res-mq} {
+        #{$propName}: calc(#{$minValWithoutUnit}#{$unitForValue} + (#{$maxValWithoutUnit} - #{$minValWithoutUnit}) * (100vw - #{$minViewportWidthInPx}px) / (#{$maxViewportWidthInPix} - #{$minViewportWidthInPx}));
+    }
+}

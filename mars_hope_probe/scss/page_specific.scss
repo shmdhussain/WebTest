@@ -1,0 +1,42 @@
+@import "_mixins.scss";
+@import "_settings.scss";
+@font-face {
+    font-family: "HelveticaNeueReg";
+    font-display: swap;
+    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff2") format("woff2"),
+            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.woff") format("woff"),
+            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Rg_web.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    font-display: swap;
+    src:    url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff2") format("woff2"),
+            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.woff") format("woff"),
+            url("https://www.skynewsarabia.com/static/web-rev/styles/sna-font/HelveticaNeueMEforSKYW21-Bd_web.ttf") format("truetype");
+    font-style: normal;
+}
+body{
+	max-width: 1440px;
+	padding: 0;
+	margin: 0 auto;
+	@media #{$medium} {
+		padding: 0 0px;
+	}
+	@media #{$large} {
+		padding: 0 10px;
+	}
+}
+*{
+	box-sizing: border-box;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+
+.hide{
+	display: none  !important;
+}
