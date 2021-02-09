@@ -105,10 +105,12 @@
             hopeMarsProbeData.estimatedTemp = 0;
             hopeMarsProbeData.estimatedDistanceCovered = (response[1].distance_travelled - response[0].distance_travelled) / timeDiffBetweenCurrentAndEstimated;
             hopeMarsProbeData.estimatedSpeed = (response[1].speed - response[0].speed) / timeDiffBetweenCurrentAndEstimated;
+            hopeMarsProbeData.estimatedDistanceLeft = (response[1].distance_left - response[0].distance_left) / timeDiffBetweenCurrentAndEstimated;
 
             hopeMarsProbeData.lastObservedTemp = 7.33;
             hopeMarsProbeData.lastObservedDistanceCovered = response[0].distance_travelled;
             hopeMarsProbeData.lastObservedSpeed = response[0].speed;
+            hopeMarsProbeData.lastObservedDistanceLeft = response[0].distance_left;
 
             hopeMarsProbeData.lastObservedTime = response[0].time;
         }
@@ -122,9 +124,9 @@
             // var currentTimeStamp = 1612749420 * 1000 + j // TO BE commented 
             var d = hopeMarsProbeData;
             var temperature = 7.33;
-            var covered     = Math.min(Math.floor(hopeMarsProbeData.totalDistance), Math.floor(d.lastObservedDistanceCovered + (d.estimatedDistanceCovered * (currentTimeStamp - d.lastObservedTime))));
-            var remaining   = Math.max(0, Math.floor(hopeMarsProbeData.totalDistance - covered));
-            var speed       = Math.floor(d.lastObservedSpeed + (d.estimatedSpeed) * (currentTimeStamp - d.lastObservedTime));
+            var covered     = Math.floor(d.lastObservedDistanceCovered + (d.estimatedDistanceCovered * (currentTimeStamp - d.lastObservedTime)));
+            var remaining   = Math.max(0, Math.floor(d.lastObservedDistanceLeft + d.estimatedDistanceLeft * (currentTimeStamp - d.lastObservedTime)))
+            var speed       = Math.max(0, Math.floor(d.lastObservedSpeed + (d.estimatedSpeed) * (currentTimeStamp - d.lastObservedTime)));
 
             
 
@@ -202,12 +204,12 @@
                 remainingMinutes : remainingMinutes,
                 remainingSeconds : remainingSeconds
             }
-            console.log("***********************************");
-            console.log("rem days", remainingDays);
-            console.log("rem hour", remainingHours);
-            console.log("rem mins", remainingMinutes);
-            console.log("rem secs", remainingSeconds);
-            console.log("***********************************");
+            // console.log("***********************************");
+            // console.log("rem days", remainingDays);
+            // console.log("rem hour", remainingHours);
+            // console.log("rem mins", remainingMinutes);
+            // console.log("rem secs", remainingSeconds);
+            // console.log("***********************************");
 
 
             requestAnimationFrame(function(){
@@ -302,8 +304,7 @@
 
         getJSON('https://admin.emiratesmarsmission.ae/site-data', function(response) {
             // console.log('Your public IP address is: ' , response);
-            console.log("ggg");
-            console.log(response);
+            // console.log(response);
             if(response && typeof response[0] != "undefined" && response[0] && typeof response[0]["value"] != "undefined" && response[0]["value"]){
                 hopeMarsProbeData.timeStampToReachMarsOrbit = new Date(response[0]["value"].split(" ").join("T") + "Z");
                 hopeMarsProbeContEl.querySelector('.mars_probe_ch_info_box.remaining_time').classList.remove("hide")
