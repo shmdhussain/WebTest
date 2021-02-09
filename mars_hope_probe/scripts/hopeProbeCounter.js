@@ -1,9 +1,5 @@
 (function(){
-    var curScriptElement = document.currentScript;
-    var hopeMarsProbeContEl = curScriptElement.previousElementSibling;
-    if(!hopeMarsProbeContEl.classList.contains('mars_probe_ch_cont')){
-        return;
-    }
+    var hopeMarsProbeContEl = document.querySelector('#sna_mars_probe_ch');;
     // console.log(curScriptElement);
     // debugger;
     if(document.readyState == 'interactive' || document.readyState == 'complete'){
@@ -18,8 +14,8 @@
 
     function hopeMarsProbeInit() {
         var cusHTMLId = 'sna_mars_probe_ch';
-        var timeRemainingSpeedBasedMethod = true;
-
+        var timeRemainingSpeedBasedMethod = false;
+        var lastAnimationFrameScheduledId;
        
 
         var addComas = function(num){
@@ -42,7 +38,8 @@
             speed: 0,
             distanceCovered: 0,
             distanceRemaining: 0,
-            totalDistance: 480492400.207269
+            totalDistance: 480492400.207269,
+            timeStampToReachMarsOrbit: NaN
         }
 
 
@@ -116,7 +113,6 @@
             hopeMarsProbeData.lastObservedTime = response[0].time;
         }
         var uiStateData;
-        var lastRaffCall;
         // var j = 0; //to be commented
         function updateData() {
 
@@ -163,8 +159,11 @@
 
             } else{
                 /*START: Method 2*/
-                var timestampToReachMarsOrbit = 1612835880000; //Feb 9, 2021 01:58AM 2021-02-09T01:58:00+0000
-                if(currentTimeStamp >= timestampToReachMarsOrbit){
+                var timestampToReachMarsOrbit = hopeMarsProbeData.timeStampToReachMarsOrbit; //1612835880000- Feb 9, 2021 01:58AM 2021-02-09T01:58:00+0000
+                if(isNaN(timestampToReachMarsOrbit)){
+
+                }
+                else if(currentTimeStamp >= timestampToReachMarsOrbit){
                     remainingDays  = 0;
                     remainingHours = 0;
                     remainingMinutes = 0;
@@ -272,7 +271,7 @@
                     timeRemainingInHoursInfoBoxEl.classList.remove("hide");
                 } else if(state.remainingHours){
                     timeRemainingInHoursInfoBoxEl.classList.remove("hide");
-                } else{
+                } else if(typeof state.remainingDays != "undefined"){
                     timeRemainingInMinsInfoBoxEl.classList.remove("hide");
                     // timeRemainingInSecsInfoBoxEl.classList.remove("hide");// to be commented
                 }
@@ -298,8 +297,23 @@
             updateData();
         }, function(status) {
             hopeMarsProbeContEl.classList.add("hide");
-            console.log('Something went wrong.');
+            console.log('error in getting the distance and speed');
         });
+
+        getJSON('https://admin.emiratesmarsmission.ae/site-data', function(response) {
+            // console.log('Your public IP address is: ' , response);
+            console.log("ggg");
+            console.log(response);
+            if(response && typeof response[0] != "undefined" && response[0] && typeof response[0]["value"] != "undefined" && response[0]["value"]){
+                hopeMarsProbeData.timeStampToReachMarsOrbit = new Date(response[0]["value"].split(" ").join("T") + "Z");
+                hopeMarsProbeContEl.querySelector('.mars_probe_ch_info_box.remaining_time').classList.remove("hide")
+                window.cancelAnimationFrame(lastAnimationFrameScheduledId);
+            }
+        }, function(status) {
+            hopeMarsProbeContEl.querySelector('.mars_probe_ch_info_box.remaining_time').classList.add("hide")
+            console.log('error in getting the countdown time');
+        });
+
     }
 
 })();
