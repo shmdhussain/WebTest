@@ -375,7 +375,7 @@
 	            distanceCovered: 0,
 	            distanceRemaining: 0,
 	            totalDistance: 480492400.207269,
-	            timeStampToReachMarsOrbit: 0
+	            timeStampToReachMarsOrbit: NaN
 	        }
 
 
@@ -441,10 +441,12 @@
 	            hopeMarsProbeData.estimatedTemp = 0;
 	            hopeMarsProbeData.estimatedDistanceCovered = (response[1].distance_travelled - response[0].distance_travelled) / timeDiffBetweenCurrentAndEstimated;
 	            hopeMarsProbeData.estimatedSpeed = (response[1].speed - response[0].speed) / timeDiffBetweenCurrentAndEstimated;
+	            hopeMarsProbeData.estimatedDistanceLeft = (response[1].distance_left - response[0].distance_left) / timeDiffBetweenCurrentAndEstimated;
 
 	            hopeMarsProbeData.lastObservedTemp = 7.33;
 	            hopeMarsProbeData.lastObservedDistanceCovered = response[0].distance_travelled;
 	            hopeMarsProbeData.lastObservedSpeed = response[0].speed;
+	            hopeMarsProbeData.lastObservedDistanceLeft = response[0].distance_left;
 
 	            hopeMarsProbeData.lastObservedTime = response[0].time;
 	        }
@@ -458,9 +460,9 @@
 	            // var currentTimeStamp = 1612749420 * 1000 + j // TO BE commented 
 	            var d = hopeMarsProbeData;
 	            var temperature = 7.33;
-	            var covered     = Math.min(Math.floor(hopeMarsProbeData.totalDistance), Math.floor(d.lastObservedDistanceCovered + (d.estimatedDistanceCovered * (currentTimeStamp - d.lastObservedTime))));
-	            var remaining   = Math.max(0, Math.floor(hopeMarsProbeData.totalDistance - covered));
-	            var speed       = Math.floor(d.lastObservedSpeed + (d.estimatedSpeed) * (currentTimeStamp - d.lastObservedTime));
+	            var covered     = Math.floor(d.lastObservedDistanceCovered + (d.estimatedDistanceCovered * (currentTimeStamp - d.lastObservedTime)));
+	            var remaining   = Math.max(0, Math.floor(d.lastObservedDistanceLeft + d.estimatedDistanceLeft * (currentTimeStamp - d.lastObservedTime)))
+	            var speed       = Math.max(0, Math.floor(d.lastObservedSpeed + (d.estimatedSpeed) * (currentTimeStamp - d.lastObservedTime)));
 
 	            
 
@@ -496,8 +498,10 @@
 	            } else{
 	                /*START: Method 2*/
 	                var timestampToReachMarsOrbit = hopeMarsProbeData.timeStampToReachMarsOrbit; //1612835880000- Feb 9, 2021 01:58AM 2021-02-09T01:58:00+0000
-	                
-	                if(currentTimeStamp >= timestampToReachMarsOrbit){
+	                if(isNaN(timestampToReachMarsOrbit)){
+
+	                }
+	                else if(currentTimeStamp >= timestampToReachMarsOrbit){
 	                    remainingDays  = 0;
 	                    remainingHours = 0;
 	                    remainingMinutes = 0;
@@ -605,7 +609,7 @@
 	                    timeRemainingInHoursInfoBoxEl.classList.remove("hide");
 	                } else if(state.remainingHours){
 	                    timeRemainingInHoursInfoBoxEl.classList.remove("hide");
-	                } else{
+	                } else if(typeof state.remainingDays != "undefined"){
 	                    timeRemainingInMinsInfoBoxEl.classList.remove("hide");
 	                    // timeRemainingInSecsInfoBoxEl.classList.remove("hide");// to be commented
 	                }
@@ -627,7 +631,6 @@
 
 	        getJSON('https://admin.emiratesmarsmission.ae/probe-info', function(response) {
 	            // console.log('Your public IP address is: ' , response);
-	            // debugger;
 	            initAppWithData(response);
 	            updateData();
 	        }, function(status) {
@@ -637,7 +640,6 @@
 
 	        getJSON('https://admin.emiratesmarsmission.ae/site-data', function(response) {
 	            // console.log('Your public IP address is: ' , response);
-	            // console.log("ggg");
 	            // console.log(response);
 	            if(response && typeof response[0] != "undefined" && response[0] && typeof response[0]["value"] != "undefined" && response[0]["value"]){
 	                hopeMarsProbeData.timeStampToReachMarsOrbit = new Date(response[0]["value"].split(" ").join("T") + "Z");
@@ -652,6 +654,12 @@
 	    }
 
 	})();
+
+
+
+
+
+
 
 
 
