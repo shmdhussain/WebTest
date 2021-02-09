@@ -10,11 +10,12 @@
 	width: 100%;
 	background-size: cover;
 	background-image: url("https://www.skynewsarabia.com/hope_mars_probe/hope_probe_bg_mobile.jpg");
+	background-image: url("../assets/hope_mars_probe/hope_probe_bg_mobile.jpg");
 	// min-height: 195px; //2800/390
 	display:flex;
 	flex:  0 0 auto;
 	margin: 0 0 15px;
-	
+
 	text-decoration: none;
 	color: black;
 	&:hover,
@@ -33,6 +34,7 @@
 	}
 	@media #{$medium} {
 		background-image: url("https://www.skynewsarabia.com/hope_mars_probe/hope_probe_bg_tablet.jpg");
+		background-image: url("../assets/hope_mars_probe/hope_probe_bg_tablet.jpg");
 		// min-height: 195px; //1496/277
 		
 		&::before{
@@ -41,6 +43,7 @@
 	}
 	@media #{$large} {
 		background-image: url("https://www.skynewsarabia.com/hope_mars_probe/hope_probe_bg_desktop.jpg");
+		background-image: url("../assets/hope_mars_probe/hope_probe_bg_desktop.jpg");
 		// min-height: 195px; //2800/390
 		
 		&::before{
