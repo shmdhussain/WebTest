@@ -134,7 +134,7 @@ function initPage(dataUrl) {
       liveStreamUrl = null;
       //   liveStreamUrl = "https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8";
       ottPromotionText = "ss";
-      ottLiveStreamImage = _.get(data, "live_stream.ott_live_stream_image", null);
+      ottLiveStreamImage = null;
 
       liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
       liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
