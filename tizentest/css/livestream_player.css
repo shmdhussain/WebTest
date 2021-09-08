@@ -1,0 +1,95 @@
+/*START:styles after updating jw player to 7.9.3 in livestream page */
+.live_stream_page .jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-rewind {
+  visibility: hidden; }
+
+.live_stream_page #video_full_player {
+  /*START:When ad is ON, set the control bar height in small player 100% */
+  /*END:When ad is ON, set the control bar height in small player 100% */
+  /*START:jw-group not there in jwplayer-8, thsi block to be removed */
+  /*END:jw-group not there in jwplayer-8, thsi block to be removed */ }
+
+.live_stream_page #video_full_player .jw-display .jw-display-icon-rewind {
+  visibility: hidden; }
+
+@media only print, screen and (max-width: 767px) {
+  .live_stream_page #video_full_player .jw-flag-ads-googleima .jw-controlbar,
+  .live_stream_page #video_full_player .jw-flag-ads .jw-controlbar {
+    height: 100%; } }
+
+.live_stream_page #video_full_player .jw-controlbar {
+  height: 2.5em;
+  padding: 0 0.52em; }
+
+.live_stream_page #video_full_player .jw-slider-time,
+.live_stream_page #video_full_player .jw-text-elapsed,
+.live_stream_page #video_full_player .jw-text-duration,
+.live_stream_page #video_full_player .jw-text-countdown {
+  display: none !important; }
+
+/*END:styles after updating jw player to 7.9.3 in livestream page */
+/*START:show play button when player is in paused state,
+ for smalll screen this is going to be shown ,
+ but on large screen center big play btn is not shown when [player is in paused state] */
+.live_stream_page .jwplayer.jw-state-playing.jw-flag-user-inactive .jw-display,
+.live_stream_page .jwplayer.jw-state-buffering.jw-flag-user-inactive .jw-display {
+  display: none; }
+
+.live_stream_page #video_full_player.jwplayer:not(.jw-state-playing) .jw-display {
+  display: table; }
+
+/*END:show play button when player is in paused state,
+ for smalll screen this is going to be shown ,
+ but on large screen center big play btn is not shown when [player is in paused state] */
+/*START:Hide the title of jw player */
+.jw-title {
+  display: none !important; }
+
+/*START:enable the error msg shown by Jw Player on live streaming page where m3u8 is not supported for ex IE11 */
+.jw-sna-error.jw-title.jw-reset {
+  display: block !important; }
+
+.jw-sna-error.jw-title.jw-reset .jw-title-primary,
+.jw-sna-error.jw-title.jw-reset .jw-title-secondary {
+  overflow: visible;
+  white-space: normal; }
+
+body.main-page .jwplayer.jw-state-error .jw-error-msg .jw-icon.jw-reset.jw-sna-error {
+  margin-right: 20px !important; }
+
+/*END:enable the error msg shown by Jw Player on live streaming page where m3u8 is not supported for ex IE11 */
+/*END:Hide the title of jw player */
+/*START:hide the jw player card board */
+.jw-dock-button[button=cardboard] {
+  display: none; }
+
+#video_full_player .jw-display-container {
+  display: table-cell;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle; }
+
+#video_full_player .jw-controlbar .jw-settings-submenu-button,
+#video_full_player .jw-controlbar .jw-icon-pip,
+#video_full_player .jw-controlbar .jw-icon-fullscreen,
+#video_full_player .jw-controlbar .jw-icon-volume,
+#video_full_player .jw-controlbar .jw-icon-playback {
+  display: none; }
+
+.live_stream_page #video_full_player.jwplayer:not(.jw-state-playing) .jw-display,
+.live_stream_page #video_full_player.jwplayer.jw-state-playing:not(.jw-flag-user-inactive) .jw-display {
+  display: table; }
+
+#video_full_player .jw-text-live {
+  font-family: 'HelveticaNeueBold';
+  font-size: 16px; }
+
+#video_full_player:not(.jw-flag-touch) .jw-button-color:not(.jw-logo-button),
+#video_full_player:not(.jw-flag-touch) .jw-button-color:not(.jw-logo-button) {
+  color: rgba(255, 255, 255, 0.9); }
+
+.jw-controlbar {
+  display: none  !important; }
+
+/*END:hide the jw player card board */
+
+/*# sourceMappingURL=sourcemaps/livestream_player.css.map */

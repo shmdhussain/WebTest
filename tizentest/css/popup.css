@@ -1,0 +1,106 @@
+.popup_container {
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2; }
+
+.popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation: fade-in 200ms both;
+          animation: fade-in 200ms both; }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; } }
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%); } }
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%); } }
+
+.popup_content {
+  background-color: white;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+  -webkit-animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+          animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+  padding: 32px;
+  max-width: 25%;
+  width: 600px;
+  border-radius: 2px; }
+
+/*START:Exit popup styles */
+.popup_title {
+  font-family: HelveticaNeueBold;
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 20px; }
+
+.popup_description {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 30px; }
+
+.popup_btn_container {
+  text-align: center; }
+
+/*END:Exit popup styles */
+/*START:button styles */
+button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  font-family: HelveticaNeueReg;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #AC0000;
+  background: #ffffff;
+  border: 2px solid #AC0000; }
+
+button:hover,
+button:focus {
+  color: #ffffff;
+  background: #AC0000; }
+
+button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99); }
+
+.popup_primary_btn,
+.popup_secondary_btn {
+  min-width: 100%;
+  display: block;
+  font-size: 24px; }
+
+.popup_secondary_btn {
+  margin-top: 25px; }
+
+/*END:button styles */
+
+/*# sourceMappingURL=sourcemaps/popup.css.map */

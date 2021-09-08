@@ -1,0 +1,23 @@
+{
+  "name": "sna_us_map",
+  "version": "1.0.0",
+  "description": "sna academy fronend code",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "sass-watch": "gulp watch",
+    "sass": "gulp sass"
+  },
+  "author": "Mohamed Hussain S H <shmdhussain12@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

@@ -36,7 +36,7 @@
 		background-image: url("https://www.skynewsarabia.com/hope_mars_probe/hope_probe_bg_tablet.jpg");
 		background-image: url("../assets/hope_mars_probe/hope_probe_bg_tablet.jpg");
 		// min-height: 195px; //1496/277
-		
+
 		&::before{
 			padding-bottom: 18.5%;
 		}
@@ -45,7 +45,7 @@
 		background-image: url("https://www.skynewsarabia.com/hope_mars_probe/hope_probe_bg_desktop.jpg");
 		background-image: url("../assets/hope_mars_probe/hope_probe_bg_desktop.jpg");
 		// min-height: 195px; //2800/390
-		
+
 		&::before{
 			padding-bottom: 13.9%;
 		}
@@ -77,11 +77,11 @@
     @include sna_flex_container_wrap(wrap);
     padding: 6px;
     @media #{$medium} {
-    	@include responsive-unit($propName: "padding", 
-    	                         $unitForValue: "px", 
-    							 $minValWithoutUnit: 10, 
-    							 $maxValWithoutUnit: 20, 
-    							 $minViewportWidthInPx: 768, 
+    	@include responsive-unit($propName: "padding",
+    	                         $unitForValue: "px",
+    							 $minValWithoutUnit: 10,
+    							 $maxValWithoutUnit: 20,
+    							 $minViewportWidthInPx: 768,
     							 $maxViewportWidthInPix: 1279);
     	align-items: center;
     }
@@ -152,7 +152,7 @@
 		padding-right: 25px;
 		@include sna_item_col_width_abs(50%);
 	}
-	
+
 }
 
 
@@ -160,20 +160,20 @@
 .mars_probe_ch_info_inner_cont{
 	display: flex;
 	@include sna_flex_container_wrap(wrap);
-	
+
 	margin-top: 0;
 	margin-bottom: 0;
-	@include responsive-unit($propName: "margin-left", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: -3, 
-							 $maxValWithoutUnit: -7, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "margin-left",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: -3,
+							 $maxValWithoutUnit: -7,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
-	@include responsive-unit($propName: "margin-right", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: -3, 
-							 $maxValWithoutUnit: -7, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "margin-right",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: -3,
+							 $maxValWithoutUnit: -7,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
 	height: 100%;
 	@media #{$medium} {
@@ -191,11 +191,11 @@
 	display: flex;
 	transform: translateZ(0);
 	height: 50%;
-	@include responsive-unit($propName: "padding", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: 3, 
-							 $maxValWithoutUnit: 7, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "padding",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: 3,
+							 $maxValWithoutUnit: 7,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
 	@media #{$medium} {
 		padding: 7px;
@@ -237,7 +237,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 }
 .mars_probe_ch_info_box_svg {
     width: 73%;
@@ -249,23 +249,23 @@
 	width: 100%;
 	text-align: center;
 	line-height: 1;
-	@include responsive-unit($propName: "font-size", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: 10, 
-							 $maxValWithoutUnit: 20, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "font-size",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: 10,
+							 $maxValWithoutUnit: 20,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
 	@media #{$medium} {
-		@include responsive-unit($propName: "font-size", 
-		                         $unitForValue: "px", 
-								 $minValWithoutUnit: 15, 
-								 $maxValWithoutUnit: 22, 
-								 $minViewportWidthInPx: 768, 
+		@include responsive-unit($propName: "font-size",
+		                         $unitForValue: "px",
+								 $minValWithoutUnit: 15,
+								 $maxValWithoutUnit: 22,
+								 $minViewportWidthInPx: 768,
 								 $maxViewportWidthInPix: 1279);
 	}
 	@media #{$large} {
 		font-size: 17px;
-		
+
 	}
 }
 
@@ -274,36 +274,36 @@
 	width: 100%;
 	text-align: center;
 	line-height: 1  !important;
-	@include responsive-unit($propName: "padding-top", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: 5, 
-							 $maxValWithoutUnit: 7, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "padding-top",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: 5,
+							 $maxValWithoutUnit: 7,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
-	@include responsive-unit($propName: "font-size", 
-	                         $unitForValue: "px", 
-							 $minValWithoutUnit: 13, 
-							 $maxValWithoutUnit: 25, 
-							 $minViewportWidthInPx: 320, 
+	@include responsive-unit($propName: "font-size",
+	                         $unitForValue: "px",
+							 $minValWithoutUnit: 13,
+							 $maxValWithoutUnit: 25,
+							 $minViewportWidthInPx: 320,
 							 $maxViewportWidthInPix: 767);
 	@media #{$medium} {
-		@include responsive-unit($propName: "padding-top", 
-		                         $unitForValue: "px", 
-								 $minValWithoutUnit: 7, 
-								 $maxValWithoutUnit: 10, 
-								 $minViewportWidthInPx: 768, 
+		@include responsive-unit($propName: "padding-top",
+		                         $unitForValue: "px",
+								 $minValWithoutUnit: 7,
+								 $maxValWithoutUnit: 10,
+								 $minViewportWidthInPx: 768,
 								 $maxViewportWidthInPix: 1279);
-		@include responsive-unit($propName: "font-size", 
-		                         $unitForValue: "px", 
-								 $minValWithoutUnit: 16, 
-								 $maxValWithoutUnit: 25, 
-								 $minViewportWidthInPx: 768, 
+		@include responsive-unit($propName: "font-size",
+		                         $unitForValue: "px",
+								 $minValWithoutUnit: 16,
+								 $maxValWithoutUnit: 25,
+								 $minViewportWidthInPx: 768,
 								 $maxViewportWidthInPix: 1279);
 	}
 	@media #{$large} {
 		padding-top: 7px;
 		font-size: 20px;
-		
+
 	}
 
 }

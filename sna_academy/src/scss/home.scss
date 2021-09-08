@@ -1,0 +1,23 @@
+@import "_mixins.scss";
+@import "_settings.scss";
+@import "_reset.scss";
+
+
+body{
+
+
+
+    color:red;
+    @media #{$medium} {
+        color:yellow;
+    }
+    @media #{$medium-laptop-up} {
+        color:green;
+    }
+    @media #{$large} {
+        color:pink;
+    }
+
+
+}
+@import "components/hero/hero"

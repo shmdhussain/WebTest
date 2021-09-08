@@ -1,0 +1,106 @@
+.page_wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center; }
+
+.ls_cont {
+  height: calc(100% - 80px);
+  -webkit-align-items: center;
+          align-items: center;
+  max-width: 53%;
+  -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+          justify-content: center; }
+
+.show_full_error .ls_cont {
+  -webkit-align-items: flex-start;
+          align-items: flex-start; }
+
+.ls_logo_cont {
+  width: 40%;
+  -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+.ls_logo_cont img {
+  width: 100%; }
+
+.ls_title {
+  font-size: 28px;
+  font-family: HelveticaNeueBold;
+  -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%;
+  padding-bottom: 40px;
+  text-align: center; }
+
+.ls_player_outer_cont {
+  background-color: #FFF;
+  padding: 5px 5px 5px;
+  -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%; }
+
+.ls_player_cont {
+  position: relative; }
+
+.ls_player_cont:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.25%; }
+
+.ls_player_cont > .ls_player_inner_cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.ls_player_inner_cont img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.ls_player_cont video {
+  width: 100%; }
+
+.ls_player_caption {
+  padding: 20px 20px;
+  font-size: 22px; }
+
+.ls_error_cont {
+  -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%; }
+
+.ls_error_text {
+  font-size: 28px;
+  font-family: HelveticaNeueBold;
+  text-align: center;
+  padding-top: 30px; }
+
+.ls_error_image {
+  text-align: center; }
+
+.ls_error_image img {
+  width: 20%; }
+
+/*# sourceMappingURL=sourcemaps/home.css.map */

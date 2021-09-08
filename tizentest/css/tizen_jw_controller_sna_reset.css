@@ -1,0 +1,11 @@
+.jw-pause-display,
+.jw-pause-display *,
+.jw-settings-menu-tizen,
+.jw-settings-menu-tizen *,
+.jw-nextup-container,
+.jw-nextup-container *,
+.jw-tizen-seekbar,
+.jw-tizen-seekbar * {
+  visibility: hidden !important; }
+
+/*# sourceMappingURL=sourcemaps/tizen_jw_controller_sna_reset.css.map */
