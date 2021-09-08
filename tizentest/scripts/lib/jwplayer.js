@@ -68,10 +68,10 @@ window.jwplayer = (function (t) {
 							}[t] || t) +
 							'.js'
 						);
-						if(pluginUrl.includes("jwplayer.controls.tizen")){
-							pluginUrl = 'scripts/lib/' +'jwplayer.controls.tizen' +
-							'.js';
-						}
+						// if(pluginUrl.includes("jwplayer.controls.tizen")){
+						// 	pluginUrl = 'scripts/lib/' +'jwplayer.controls.tizen' +
+						// 	'.js';
+						// }
 						return pluginUrl;
 					})(t));
 				var c = new Error();
