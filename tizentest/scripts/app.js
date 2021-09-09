@@ -137,8 +137,8 @@ function initPage(dataUrl) {
   ottLiveStreamImage = "https://www.skynewsarabia.com/images//v1/2019/05/07/1250200/1024/576/1-1250200.png";
 
   // liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
-  // liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
-  liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
+  liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
+  // liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
   //   debugger;
 
   if (!liveStreamUrl) {
