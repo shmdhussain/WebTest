@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <title>البث المباشر | سكاي نيوز عربية</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/livestream_player.css" />
+    <link rel="stylesheet" href="css/tizen_jw_controller_sna_reset.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <script src="scripts/debug.js" charset="utf-8"></script>
+    <script src="scripts/lib/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/lib/spatial_navigation.js" charset="utf-8"></script>
+    <script src="scripts/lib/lodash.custom.min.js" charset="utf-8"></script>
+    <script src="scripts/lib/jwplayer.js"></script>
+    <script>
+      jwplayer.key = "kgwsY/fcnsZ9bDqYHXD7DBRUd0fzxYGqdj2dpwi6rj5Y/w7G";
+    </script>
+
+    <script src="scripts/sna_analytics.js" charset="utf-8"></script>
+    <script src="scripts/app11.js" charset="utf-8"></script>
+    <style>
+      *:not(button):focus {
+        outline: 1px solid red !important;
+      }
+    </style>
+    <!--END:  debug scripts-->
+    <!--START:  debug scripts-->
+    <script>
+      window.addEventListener("load", function () {
+        var ua = navigator.userAgent;
+        document.querySelector(".dd").innerHTML = ua;
+      });
+    </script>
+    <style>
+      *:not(button):focus {
+        outline: 1px solid red !important;
+      }
+    </style>
+    <!--END:  debug scripts-->
+  </head>
+  <body class="live_stream_page">
+    <!--START:  main player for the app-->
+    <div class="video_full  page_wrapper">
+       <button type="button" onclick="window.player.play()">Play</button>
+      <div id="video_full_player" class="video_full_player"></div>
+    </div>
+
+    <!--END:  main player for the app-->
+
+    <!-- below line to be remved -->
+        <div id="key_results1" style="position: absolute; z-index: 2; left: 50%; background: pink; top: 100px"></div>
+        <h1 style="color: green" class="dd"></h1>
+    <!--START:  exit confirmation popup-->
+
+    <div class="popup_container exit_confirm_popup hide" id="exit_confirm_popup">
+      <div class="popup_overlay"></div>
+      <div class="popup_content">
+        <h1 class="popup_title">الخروج من التطبيق</h1>
+
+        <p class="popup_description">هل ترغب تاكيد الخروج من تطبيق</p>
+
+        <div class="popup_btn_container">
+          <button type="button" class="popup_primary_btn focusable" name="yes">الخروج</button
+          ><button type="button" class="popup_secondary_btn focusable" name="cancel">الغاء</button>
+        </div>
+      </div>
+    </div>
+    <!--END:  exit confirmation popup-->
+  </body>
+</html>
