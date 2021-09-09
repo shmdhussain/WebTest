@@ -68,7 +68,7 @@ window.jwplayer = (function (t) {
 							}[t] || t) +
 							'.js'
 						);
-						if(pluginUrl.includes("jwplayer.controls.tizen")){
+						if(pluginUrl.indexOf("jwplayer.controls.tizen") > -1){
 							pluginUrl = 'scripts/lib/' +'jwplayer.controls.tizen' +
 							'.js';
 						}

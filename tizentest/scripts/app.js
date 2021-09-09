@@ -129,50 +129,40 @@ function arrowClickExtendTimer() {
 }
 var domain = "https://www.skynewsarabia.com";
 function initPage(dataUrl) {
-  $.ajax({
-    url: domain + dataUrl,
-    dataType: "json",
-    success: function (data) {
-      //   debugger;
+  var ottLiveStreamImage, ottPromotionText, liveStreamUrl;
 
-      var ottLiveStreamImage, ottPromotionText, liveStreamUrl;
+  // liveStreamUrl = _.get(data, "live_stream.live_stream_url[0].url", null);
+  //   liveStreamUrl = "https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8";
+  ottPromotionText = "promo text";
+  ottLiveStreamImage = "https://www.skynewsarabia.com/images//v1/2019/05/07/1250200/1024/576/1-1250200.png";
 
-      liveStreamUrl = _.get(data, "live_stream.live_stream_url[0].url", null);
-      //   liveStreamUrl = "https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8";
-      ottPromotionText = _.get(data, "live_stream.ott_promotion_text", "");
-      ottLiveStreamImage = _.get(data, "live_stream.ott_live_stream_image", null);
+  // liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
+  liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
+  // liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
+  //   debugger;
 
-      // liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
-      // liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
-      //   debugger;
+  if (!liveStreamUrl) {
+    errorInFetchingData();
+    return;
+  }
 
-      if (!liveStreamUrl) {
-        errorInFetchingData();
-        return;
-      }
-
-      setupPlayer({
-        livestreamUrl: liveStreamUrl,
-        livestreamImage: ottLiveStreamImage,
-        livestreamPromoText: ottPromotionText,
-      });
-
-      if (ottLiveStreamImage) {
-        $(".ls_player_inner_cont_img").prop("src", ottLiveStreamImage);
-      }
-      $(".ls_player_outer_cont").data("video-url", liveStreamUrl);
-
-      $(".ls_player_outer_cont").removeClass("visibility_hidden");
-
-      if (ottPromotionText) {
-        $(".ls_title").html(ottPromotionText);
-        $(".ls_title").removeClass("visibility_hidden");
-      }
-    },
-    error: function () {
-      errorInFetchingData();
-    },
+  setupPlayer({
+    livestreamUrl: liveStreamUrl,
+    livestreamImage: ottLiveStreamImage,
+    livestreamPromoText: ottPromotionText,
   });
+
+  if (ottLiveStreamImage) {
+    $(".ls_player_inner_cont_img").prop("src", ottLiveStreamImage);
+  }
+  $(".ls_player_outer_cont").data("video-url", liveStreamUrl);
+
+  $(".ls_player_outer_cont").removeClass("visibility_hidden");
+
+  if (ottPromotionText) {
+    $(".ls_title").html(ottPromotionText);
+    $(".ls_title").removeClass("visibility_hidden");
+  }
 }
 
 function errorInFetchingData() {
