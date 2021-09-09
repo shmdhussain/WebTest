@@ -139,7 +139,7 @@ function initPage(dataUrl) {
   // liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
   // liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
   // liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
-  // liveStreamUrl = "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8";
+  liveStreamUrl = "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8";
   //   debugger;
 
   if (!liveStreamUrl) {
