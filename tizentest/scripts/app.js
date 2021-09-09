@@ -264,7 +264,7 @@ function setupPlayer(videoConfigFromServer) {
             file: videoConfigFromServer.livestreamUrl,
           },
         ],
-        image: videoConfigFromServer.livestreamImage,
+        image: "img/trans-image.png",
         section: "LIVE-STREAM",
         author: "Sky News Arabia",
         tags: "البث المباشر",
