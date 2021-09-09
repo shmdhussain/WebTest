@@ -278,6 +278,7 @@ function setupPlayer(videoConfigFromServer) {
   window.player = jwplayer("video_full_player").setup(setup);
 
   window.player.on("ready", function () {
+    window.player.play();
     bindEventHandlerForPage();
     window.player.on("pause", function () {
       //   gtag("event", "pause", {
