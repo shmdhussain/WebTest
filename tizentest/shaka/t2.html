@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Shaka Player ui compiled library: -->
+    <script src="dist/shaka-player.ui.js"></script>
+    <!-- Shaka Player ui compiled library default CSS: -->
+    <link rel="stylesheet" type="text/css" href="dist/controls.css">
+    <script defer="" src="../scripts/lib/mux.min.js"></script>
+    <!-- Chromecast SDK (if you want Chromecast support for your app): -->
+    <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <!-- Your application source: -->
+    <script src="myapp2.js"></script>
+  </head>
+  <body>
+    <!-- The data-shaka-player-container tag will make the UI library place the controls in this div.
+         The data-shaka-player-cast-receiver-id tag allows you to provide a Cast Application ID that
+           the cast button will cast to; the value provided here is the sample cast receiver. -->
+    <div data-shaka-player-container style="max-width:40em"
+         data-shaka-player-cast-receiver-id="1BA79154">
+       <!-- The data-shaka-player tag will make the UI library use this video element.
+            If no video is provided, the UI will automatically make one inside the container div. -->
+      <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
+    </div>
+  </body>
+</html>
