@@ -129,15 +129,20 @@ function arrowClickExtendTimer() {
 }
 var domain = "https://www.skynewsarabia.com";
 function initPage(dataUrl) {
-  var ottLiveStreamImage, ottPromotionText, liveStreamUrl;
+  $.ajax({
+    url: domain + dataUrl,
+    dataType: "json",
+    success: function (data) {
+      //   debugger;
 
-      liveStreamUrl = null;
+      var ottLiveStreamImage, ottPromotionText, liveStreamUrl;
+
+      liveStreamUrl = _.get(data, "live_stream.live_stream_url[0].url", null);
       //   liveStreamUrl = "https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8";
-      ottPromotionText = "ss";
-      ottLiveStreamImage = null;
+      ottPromotionText = _.get(data, "live_stream.ott_promotion_text", "");
+      ottLiveStreamImage = _.get(data, "live_stream.ott_live_stream_image", null);
 
-      liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
-      liveStreamUrl = "https://stream.skynewsarabia.com/hls/sna.m3u8";
+      // liveStreamUrl = "https://stream.skynewsarabia.com/ott/ott.m3u8";
       // liveStreamUrl = "https://media.skynewsarabia.com/vod/1335345/1335345_480.mp4";
       //   debugger;
 
@@ -163,6 +168,11 @@ function initPage(dataUrl) {
         $(".ls_title").html(ottPromotionText);
         $(".ls_title").removeClass("visibility_hidden");
       }
+    },
+    error: function () {
+      errorInFetchingData();
+    },
+  });
 }
 
 function errorInFetchingData() {
