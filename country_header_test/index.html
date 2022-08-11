@@ -8,13 +8,14 @@
 </head>
 <body>
     Welcome to Country Header Test from CDN
-
-
     <br>
-    <br>
-    <br>
-
     <div class="country">I am from <span class="cc">...Loading...</span> </div>
+    <br>
+    <div class="cache_pop_cont">Cache Pop: <span class="cp"></span></div>
+    <br>
+    <div class="cache_pop_cont">Cache status: <span class="status"></span></div>
+    <br>
+    <div class="cache_pop_cont">Cache age: <span class="age"></span></div>
     <script>
         async function findCountry () {
             // body
@@ -25,6 +26,15 @@
                 for (const headerObj of response.headers) {
                     if(headerObj[0] === "cipcountry"){
                         document.querySelector('.cc').innerHTML = headerObj[1];
+                    }
+                    if(headerObj[0] === "x-amz-cf-pop"){
+                        document.querySelector('.cp').innerHTML = headerObj[1];
+                    }
+                    if(headerObj[0] === "x-cache"){
+                        document.querySelector('.status').innerHTML = headerObj[1];
+                    }
+                    if(headerObj[0] === "age"){
+                        document.querySelector('.age').innerHTML = headerObj[1];
                     }
                 }
 
