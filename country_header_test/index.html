@@ -18,13 +18,20 @@
     <script>
         async function findCountry () {
             // body
-            fetch(myRequest).then((response) => {
+            fetch("https://fshwebt.sna.tv/ajax/alert/ticker.json").then((response) => {
             // for each response header, log an array with header name as key
                 console.log(...response.headers);
-                document.querySelector('.cc').innerHTML = response.headers["cipcountry"];
+
+                for (const headerObj of response.headers) {
+                    if(headerObj[0] === "cipcountry"){
+                        document.querySelector('.cc').innerHTML = headerObj[1];
+                    }
+                }
+
 
             });
         }
+        findCountry()
     </script>
 </body>
 </html>
